@@ -12,7 +12,7 @@
 
 <!-- ==================== MISSION CONTROL BADGES ==================== -->
 <p align="center">
-  <a href="mailto:lathaihoa2003@gmail.com"><img src="https://img.shields.io/badge/MISSION_CONTROL-lathaihoa2003%40gmail.com-080e21?style=for-the-badge&logo=gmail&logoColor=38BDF8&labelColor=030712" alt="Email" /></a>
+  <a href="mailto:lathaihoa2003@gmail.com"><img src="https://img.shields.io/badge/COMMUNICATION-lathaihoa2003%40gmail.com-080e21?style=for-the-badge&logo=gmail&logoColor=38BDF8&labelColor=030712" alt="Email" /></a>
   <a href="https://github.com/Zeus-AIE"><img src="https://img.shields.io/badge/COORDINATES-Can_Tho,_Vietnam-080e21?style=for-the-badge&logo=googlemaps&logoColor=00F0FF&labelColor=030712" alt="Location" /></a>
   <a href="https://github.com/Zeus-AIE"><img src="https://komarev.com/ghpvc/?username=Zeus-AIE&color=00F0FF&style=for-the-badge&label=RADAR+SCANS" alt="Profile Views" /></a>
   <a href="https://github.com/Zeus-AIE?tab=repositories"><img src="https://img.shields.io/badge/ORBITAL_REPOS-PUBLIC-080e21?style=for-the-badge&logo=github&logoColor=818CF8&labelColor=030712" alt="Repositories" /></a>
@@ -22,21 +22,19 @@
 
 ---
 
-### 🛰️ Mission Parameters // System Specification
+### About Me
 
-```yaml
-Operator Identity : Lã Thái Hòa (Callsign: Zeus)
-Academic Station  : Can Tho University (CTU) — B.S. in Computer Science [GPA: 3.37 / 4.00]
-Core Focus        : Multimodal AI, Foundation Models, LLM Post-Training & Agentic Systems
-Architecture R&D  : Vision-Language Models, Deep Neural Networks, Scalable Edge Telemetry
-Alignment & Safety: RLHF Optimization, Data Annotation Protocols, Model Evaluation
-Systems Expertise : Low-Latency Win32 Kernel APIs, High-Performance Python & Full-Stack Systems
-Deployment Status : Primed for Advanced Engineering & Research Roles [Hireable: True]
-```
+A results-driven **AI Engineer & Systems Developer** and Computer Science graduate from **Can Tho University (CTU)** specializing in multimodal deep learning architectures, foundation models, and low-latency system telemetry.
+
+* **Core Focus**: Multimodal AI, Foundation Models, LLM Post-Training & Agentic Systems.
+* **Architecture & R&D**: Vision-Language Models, Deep Neural Networks, Scalable Edge Telemetry.
+* **Alignment & Safety**: RLHF Optimization, Data Annotation Protocols, Model Evaluation.
+* **Systems Expertise**: Low-Latency Win32 Kernel APIs, High-Performance Python & Full-Stack Systems.
+* **Academic Foundation**: Bachelor of Science in Computer Science, **Can Tho University** (GPA: **3.37 / 4.00**, 2021 – 2026).
 
 ---
 
-### 🌌 Orbital Tech Constellation
+### Technical Competencies
 
 <div align="center">
 
@@ -56,7 +54,7 @@ Deployment Status : Primed for Advanced Engineering & Research Roles [Hireable: 
 
 ---
 
-### 🚀 Flagship Mission // OmniDeck v2.5 PRO
+### Flagship Project: OmniDeck
 
 <div align="center">
   <a href="https://github.com/Zeus-AIE/OmniDeck">
@@ -67,7 +65,7 @@ Deployment Status : Primed for Advanced Engineering & Research Roles [Hireable: 
 <br/>
 
 <details open>
-  <summary><b>📡 [ MISSION TELEMETRY: OMNIDECK SPECIFICATIONS ]</b> <i>(Click to expand/collapse)</i></summary>
+  <summary><b>OmniDeck Architecture & Telemetry Specifications</b> <i>(Click to expand/collapse)</i></summary>
 
   <br/>
 
@@ -80,10 +78,10 @@ Deployment Status : Primed for Advanced Engineering & Research Roles [Hireable: 
 
 ---
 
-### 🔬 Selected Research & Engineering Work
+### Selected Research & Engineering Work
 
 <details open>
-  <summary><b>🛰️ [ ACCESS CLASSIFIED R&D MISSIONS ]</b> <i>(Click to expand/collapse)</i></summary>
+  <summary><b>Research & Academic Archives</b> <i>(Click to expand/collapse)</i></summary>
 
   <br/>
 
@@ -97,10 +95,10 @@ Deployment Status : Primed for Advanced Engineering & Research Roles [Hireable: 
 
 ---
 
-### 🎖️ Flight Accreditations & Certifications
+### Certifications & Accreditations
 
 <details>
-  <summary><b>📜 [ VERIFY PROFESSIONAL CREDENTIALS ]</b> <i>(Click to expand/collapse)</i></summary>
+  <summary><b>Professional Credentials & Honors</b> <i>(Click to expand/collapse)</i></summary>
 
   <br/>
 
@@ -114,7 +112,7 @@ Deployment Status : Primed for Advanced Engineering & Research Roles [Hireable: 
 
 ---
 
-### 📊 Orbital Telemetry & Real-Time Metrics
+### GitHub Activity & Telemetry
 
 <div align="center">
 
