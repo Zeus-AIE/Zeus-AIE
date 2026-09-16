@@ -69,8 +69,12 @@ A passionate **AI Engineer & AI Data Specialist** and Computer Science graduate 
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Zeus-AIE&show_icons=true&theme=tokyonight&hide_border=true&title_color=00F0FF&icon_color=0A84FF&text_color=ffffff&bg_color=0d1117" alt="Zeus-AIE's GitHub Stats" width="48%" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Zeus-AIE&layout=compact&theme=tokyonight&hide_border=true&title_color=00F0FF&text_color=ffffff&bg_color=0d1117" alt="Top Languages" width="48%" />
+<a href="https://github.com/Zeus-AIE">
+  <img src="https://github-stats-extended.vercel.app/api?username=Zeus-AIE&show_icons=true&theme=tokyonight&hide_border=true&title_color=00F0FF&icon_color=0A84FF&text_color=ffffff&bg_color=0d1117" alt="Zeus-AIE's GitHub Stats" width="48%" />
+</a>
+<a href="https://github.com/Zeus-AIE">
+  <img src="https://streak-stats.demolab.com/?user=Zeus-AIE&theme=tokyonight&hide_border=true&border_radius=8&background=0d1117" alt="GitHub Streak Stats" width="48%" />
+</a>
 
 </div>
 
