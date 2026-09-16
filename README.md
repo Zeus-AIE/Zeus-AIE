@@ -62,8 +62,8 @@ A results-driven **AI Engineer & Systems Developer** and Computer Science gradua
     <img src="https://github-stats-extended.vercel.app/api/pin/?username=Zeus-AIE&repo=OmniDeck&bg_color=050814&title_color=00F0FF&icon_color=38BDF8&text_color=E2E8F0&hide_border=true" alt="OmniDeck Repository Card" width="48%" />
   </a>
   &nbsp;
-  <a href="https://github.com/Zeus-AIE/VGVDTranslator">
-    <img src="https://github-stats-extended.vercel.app/api/pin/?username=Zeus-AIE&repo=VGVDTranslator&bg_color=050814&title_color=00F0FF&icon_color=38BDF8&text_color=E2E8F0&hide_border=true" alt="VGVDTranslator Repository Card" width="48%" />
+  <a href="https://github.com/Zeus-AIE/HoK-Translator">
+    <img src="https://github-stats-extended.vercel.app/api/pin/?username=Zeus-AIE&repo=HoK-Translator&bg_color=050814&title_color=00F0FF&icon_color=38BDF8&text_color=E2E8F0&hide_border=true" alt="HoK-Translator Repository Card" width="48%" />
   </a>
 </div>
 
@@ -77,8 +77,8 @@ A results-driven **AI Engineer & Systems Developer** and Computer Science gradua
   * **OmniDeck (Windows Telemetry HUD)**: Real-time hardware telemetry engine & transparent in-game HUD uniting **React 18 + TailwindCSS** with native **Python Win32 C-APIs & NVML kernel memory streams** (<0.5% CPU load).  
     ➔ [Source Code](https://github.com/Zeus-AIE/OmniDeck) • [Documentation](https://github.com/Zeus-AIE/OmniDeck#readme)
 
-  * **VGVD Translator (Real-Time In-Game Screen Translator)**: Real-time Android screen translation application for *Honor of Kings (Vương Giả Vinh Diệu)* utilizing **Google ML Kit (On-Device Chinese OCR)**, **Gemini Flash AI**, and an offline **MOBA Domain Dictionary**. Features floating bubble controls and non-intrusive transparent HUD overlay.  
-    ➔ [Source Code](https://github.com/Zeus-AIE/VGVDTranslator) • [Documentation](https://github.com/Zeus-AIE/VGVDTranslator#readme)
+  * **HoK-Translator (Honor of Kings Screen Translator)**: Real-time Android screen translation application for *Honor of Kings (Vương Giả Vinh Diệu)* utilizing **Google ML Kit (On-Device Chinese OCR)**, **Gemini Flash AI**, and an offline **MOBA Domain Dictionary**. Features floating bubble controls and non-intrusive transparent HUD overlay.  
+    ➔ [Source Code](https://github.com/Zeus-AIE/HoK-Translator) • [Download APK](https://github.com/Zeus-AIE/HoK-Translator/releases/latest) • [Documentation](https://github.com/Zeus-AIE/HoK-Translator#readme)
 
 </details>
 
