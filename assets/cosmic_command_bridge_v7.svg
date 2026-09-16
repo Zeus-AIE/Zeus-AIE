@@ -377,12 +377,19 @@
       <text x="815" y="178" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8.5" fill="#00F0FF" letter-spacing="1.5" opacity="0.9">ORBIT_RADAR // 360° TELEMETRY</text>
     </g>
 
-    <!-- 4. Combat Elements: Asteroids, Lasers, Explosions, Ship -->
+    <!-- 4. Combat Elements: Asteroids (Bug), Lasers, Explosions, Ship -->
     <g class="asteroid-target">
       <polygon points="0,-12 9,-8 14,2 10,12 -2,14 -11,8 -13,-3 -7,-11" fill="url(#asteroid-grad)" stroke="#475569" stroke-width="1" />
       <circle cx="-3" cy="-2" r="2.5" fill="#0f172a" stroke="#334155" stroke-width="0.5" />
       <circle cx="4" cy="5" r="1.8" fill="#0f172a" stroke="#334155" stroke-width="0.5" />
       <circle cx="0" cy="0" r="17" fill="none" stroke="#EF4444" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.85" />
+      <!-- Pinned Bug Reticle -->
+      <path d="M -22 -14 L -22 -22 L -14 -22" stroke="#EF4444" stroke-width="1.2" fill="none" />
+      <path d="M 14 -22 L 22 -22 L 22 -14" stroke="#EF4444" stroke-width="1.2" fill="none" />
+      <path d="M -22 14 L -22 22 L -14 22" stroke="#EF4444" stroke-width="1.2" fill="none" />
+      <path d="M 14 22 L 22 22 L 22 14" stroke="#EF4444" stroke-width="1.2" fill="none" />
+      <text x="0" y="-26" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8.5" font-weight="800" fill="#EF4444" letter-spacing="1">[TARGET: BUG-01]</text>
+      <text x="0" y="32" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="7.5" font-weight="700" fill="#38BDF8" letter-spacing="0.5">#404_MEM_LEAK</text>
     </g>
 
     <!-- Laser Bolts -->

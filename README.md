@@ -1,17 +1,22 @@
 <div align="center">
 
 <!-- ==================== UNIFIED COSMIC STARSHIP COMMAND BRIDGE ==================== -->
-<img src="assets/cosmic_command_bridge_v7.svg" width="100%" alt="Zeus Cosmic Starship Command Bridge" />
+<a href="https://zeus-aie.github.io/Zeus-AIE/">
+  <img src="assets/cosmic_command_bridge_v8.svg" width="100%" alt="Zeus Cosmic Starship Command Bridge" />
+</a>
 
-<br/><br/>
+<br/>
 
-<!-- ==================== TACTICAL TRANSMISSION CONTROLS ==================== -->
+<!-- ==================== LIVE COCKPIT ACCESS & TRANSMISSION CONTROLS ==================== -->
 <p align="center">
-  <a href="mailto:lathaihoa2003@gmail.com"><img src="https://img.shields.io/badge/TRANSMIT_DISPATCH-lathaihoa2003%40gmail.com-00F0FF?style=for-the-badge&logo=gmail&logoColor=040714&labelColor=070e24" alt="Direct Comms Channel" /></a>
+  <a href="https://zeus-aie.github.io/Zeus-AIE/"><img src="https://img.shields.io/badge/🛸_ENTER_LIVE_COCKPIT_BRIDGE-WEB_AUDIO_%E2%80%A2_60FPS_COMBAT_%E2%80%A2_INTERSTELLAR_MUSIC-00F0FF?style=for-the-badge&logo=spacex&logoColor=040714&labelColor=070e24" alt="Enter Live Cockpit Bridge" /></a>
+</p>
+<p align="center">
+  <a href="mailto:lathaihoa2003@gmail.com"><img src="https://img.shields.io/badge/TRANSMIT_DISPATCH-lathaihoa2003%40gmail.com-38BDF8?style=for-the-badge&logo=gmail&logoColor=040714&labelColor=070e24" alt="Direct Comms Channel" /></a>
   &nbsp;
-  <a href="https://github.com/Zeus-AIE?tab=repositories"><img src="https://img.shields.io/badge/ORBITAL_FLEET-BROWSE_REPOSITORIES-38BDF8?style=for-the-badge&logo=github&logoColor=040714&labelColor=070e24" alt="Fleet Repositories" /></a>
+  <a href="https://github.com/Zeus-AIE?tab=repositories"><img src="https://img.shields.io/badge/ORBITAL_FLEET-REPOSITORIES-818CF8?style=for-the-badge&logo=github&logoColor=040714&labelColor=070e24" alt="Fleet Repositories" /></a>
   &nbsp;
-  <a href="https://github.com/Zeus-AIE"><img src="https://komarev.com/ghpvc/?username=Zeus-AIE&color=818CF8&style=for-the-badge&label=RADAR_SCANS" alt="Radar Scans" /></a>
+  <a href="https://github.com/Zeus-AIE"><img src="https://komarev.com/ghpvc/?username=Zeus-AIE&color=00F0FF&style=for-the-badge&label=RADAR_SCANS" alt="Radar Scans" /></a>
 </p>
 
 </div>

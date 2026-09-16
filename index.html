@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZEUS // Starship Command Bridge (AI Systems Architect)</title>
+  <meta name="description" content="Interactive Starship Command Bridge & Tactical Portfolio of La Thai Hoa (Zeus) - AI Systems Architect, Multimodal Researcher & Systems Developer.">
+  <meta name="theme-color" content="#020510">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ZEUS // Cosmic Command Bridge">
+  <meta property="og:description" content="Interactive 60FPS Cockpit HUD with Web Audio SFX, Interstellar Soundtrack, and AI Systems Engineering Dossier.">
+  <meta property="og:image" content="assets/avatar.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23060c20' stroke='%2300F0FF' stroke-width='6'/><polygon points='50,20 75,75 50,60 25,75' fill='%2300F0FF'/></svg>">
+
+  <!-- Cockpit Stylesheet -->
+  <link rel="stylesheet" href="css/cockpit.css">
+</head>
+<body>
+
+  <!-- Outer Bezel Tech Brackets -->
+  <div class="bezel-bracket bezel-tl"></div>
+  <div class="bezel-bracket bezel-tr"></div>
+  <div class="bezel-bracket bezel-bl"></div>
+  <div class="bezel-bracket bezel-br"></div>
+
+  <main class="bridge-chassis">
+
+    <!-- ==================== 1. TOP STATUS RIBBON ==================== -->
+    <header class="status-ribbon">
+      <div class="ribbon-left">
+        <span class="beacon-dot"></span>
+        <span class="ribbon-tag">SYS_TELEMETRY: ONLINE</span>
+        <span class="callsign-badge">CALLSIGN: ZEUS</span>
+      </div>
+
+      <div class="ribbon-center">
+        <span class="ribbon-title">AI SYSTEMS ARCHITECT &amp; RESEARCH CONSOLE</span>
+      </div>
+
+      <div class="ribbon-right">
+        <!-- Live Telemetry Clocks -->
+        <div class="telemetry-item" id="telemetry-utc">UTC: --:--:--</div>
+        <div class="telemetry-item" id="telemetry-vn">CAN THO [GMT+7]: --:--:--</div>
+        <div class="telemetry-item bugs-counter">
+          BUGS VAPORIZED: <span class="counter-num" id="bugs-destroyed-val">000</span>
+        </div>
+
+        <!-- Audio Action Toggles -->
+        <button class="hud-btn" id="btn-audio-mute" title="Toggle Master Audio">
+          <span class="beacon-dot beacon-emerald"></span>
+          <span class="btn-text">AUDIO: ON</span>
+        </button>
+        <button class="hud-btn" id="btn-ambient-hum" title="Toggle Engine Ambient Drone">
+          <span class="btn-text">ENGINE HUM: ON</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ==================== 2. PRIMARY FLIGHT DECK ==================== -->
+    <section class="flight-deck">
+
+      <!-- LEFT WING: PILOT PROFILE CONSOLE -->
+      <aside class="pilot-console">
+        <div class="pilot-avatar-hud">
+          <div class="avatar-frame">
+            <img src="assets/avatar.jpg" alt="La Thai Hoa (Zeus) Portrait" loading="eager">
+            <span class="avatar-tag">ID: ZEUS</span>
+          </div>
+          <div class="pilot-info">
+            <h1 class="pilot-name">LA THAI HOA <span class="pilot-callsign">(ZEUS)</span></h1>
+            <p class="pilot-title">AI SYSTEMS ARCHITECT &amp; MULTIMODAL RESEARCHER</p>
+            <p class="pilot-mission">Advancing Foundation Architectures, Vision-Language Models &amp; Low-Latency Telemetry</p>
+          </div>
+        </div>
+
+        <!-- Accreditation Badges -->
+        <div class="credentials-list">
+          <div class="cred-pill">
+            <span class="beacon-dot"></span>
+            <span>CTU Computer Science • GPA 3.37 / 4.0</span>
+          </div>
+          <div class="cred-pill cred-purple">
+            <span class="beacon-dot beacon-purple"></span>
+            <span>Google Cyber &amp; UX Certified</span>
+          </div>
+          <div class="cred-pill cred-emerald">
+            <span class="beacon-dot beacon-emerald"></span>
+            <span>MISSION READY // DEPLOYABLE</span>
+          </div>
+        </div>
+
+        <!-- Core Research Directive Box -->
+        <div class="directive-card">
+          <div class="directive-label">PRIMARY RESEARCH DIRECTIVE</div>
+          <div class="directive-text">MULTIMODAL ACTION SEGMENTATION • LLM RLHF • LOW-LATENCY WIN32 C-APIs</div>
+        </div>
+      </aside>
+
+      <!-- CENTER: 60 FPS CANVAS VIEWPORT -->
+      <section class="viewport-shell">
+        <div class="viewport-header">
+          <div class="viewport-title">
+            <span class="beacon-dot"></span>
+            <span>PILOT IN COMMAND // PRIMARY FLIGHT VIEWPORT [60 FPS SIMULATION]</span>
+          </div>
+          <div class="viewport-tag">WARP FACTOR: 1.0 // SECTOR 01</div>
+        </div>
+
+        <div class="canvas-container">
+          <canvas id="space-canvas"></canvas>
+
+          <!-- Bottom Viewport Guidance -->
+          <div class="viewport-hud-overlay">
+            <div class="hud-hint">
+              🚀 [CLICK/TAP BUG OR SPACE TO FIRE LASERS • SPACEBAR = RAPID FIRE]
+            </div>
+            <div class="hud-score-pill">
+              DEFENSE SCORE: <span id="bridge-score-val">0</span> PTS
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT WING: INTERSTELLAR MUSIC WIDGET -->
+      <aside class="audio-deck-slot" id="music-widget-container">
+        <!-- Interstellar Widget mounts here dynamically -->
+      </aside>
+
+    </section>
+
+    <!-- ==================== 3. CYBERNETIC CONDUIT DIVIDER ==================== -->
+    <div class="conduit-divider">
+      <div class="conduit-line"></div>
+      <div class="conduit-badge">
+        <span class="beacon-dot"></span>
+        <span>TACTICAL ENGINEERING CAPABILITIES // 3-SCREEN MFD CLUSTER</span>
+      </div>
+      <div class="conduit-line"></div>
+    </div>
+
+    <!-- ==================== 4. LOWER DECK: 3 MFD CONSOLES ==================== -->
+    <section class="mfd-cluster">
+
+      <!-- MFD 01: MULTIMODAL AI & R&D -->
+      <article class="mfd-screen">
+        <div class="mfd-header">
+          <span class="beacon-dot"></span>
+          <span class="mfd-title">MFD_01 // MULTIMODAL AI &amp; R&amp;D</span>
+        </div>
+        <div class="mfd-body">
+          <!-- Card 1: Action Step Segmentation -->
+          <div class="mfd-card" data-dossier="thesis" title="Click to view CTU Thesis dossier">
+            <h3 class="card-title">ACTION STEP SEGMENTATION</h3>
+            <p class="card-sub">Multimodal Temporal Action Localization</p>
+            <p class="card-desc">Temporal boundary detection &amp; cross-modal audio-visual feature fusion.</p>
+            <span class="card-badge">CTU UNDERGRADUATE THESIS ➔</span>
+          </div>
+
+          <!-- Card 2: Clinical AI Platform -->
+          <div class="mfd-card card-blue" data-dossier="clinical" title="Click to view Clinical AI platform dossier">
+            <h3 class="card-title">CLINICAL AI &amp; DIAGNOSIS</h3>
+            <p class="card-sub">Medical Diagnosis &amp; Treatment Platform</p>
+            <p class="card-desc">Clinical NLP extraction, biomedical entities &amp; knowledge graphs.</p>
+            <span class="card-badge badge-blue">CUSC SOFTWARE CENTER R&amp;D ➔</span>
+          </div>
+
+          <!-- Stack -->
+          <div class="mfd-stack-box">
+            <div class="stack-lbl">FOUNDATION STACK &amp; ACCELERATION:</div>
+            <div class="stack-val">PyTorch • Hugging Face • OpenCV • CUDA</div>
+          </div>
+        </div>
+        <div class="mfd-footer">RESEARCH: VLMs &amp; COMPUTER VISION</div>
+      </article>
+
+      <!-- MFD 02: POST-TRAINING & RLHF -->
+      <article class="mfd-screen">
+        <div class="mfd-header mfd-green">
+          <span class="beacon-dot"></span>
+          <span class="mfd-title">MFD_02 // POST-TRAINING &amp; RLHF</span>
+        </div>
+        <div class="mfd-body">
+          <!-- Card 1: Preference Optimization -->
+          <div class="mfd-card card-green" data-dossier="rlhf" title="Click to view RLHF dossier">
+            <h3 class="card-title">RLHF &amp; PREFERENCE TUNING</h3>
+            <p class="card-sub">Direct Preference Optimization (DPO &amp; PPO)</p>
+            <p class="card-desc">Human feedback reward models &amp; instruction alignment protocols.</p>
+            <span class="card-badge badge-green">CENTIFIC RLHF CONTRIBUTION ➔</span>
+          </div>
+
+          <!-- Card 2: Red-Teaming Safety -->
+          <div class="mfd-card card-blue" data-dossier="rlhf" title="Click to view safety protocols">
+            <h3 class="card-title">SAFETY &amp; ADVERSARIAL EVAL</h3>
+            <p class="card-sub">Red-Teaming Vulnerability &amp; Jailbreak Tests</p>
+            <p class="card-desc">Harm assessment, guardrails &amp; benchmark validation protocols.</p>
+            <span class="card-badge badge-blue">LLM ALIGNMENT PROTOCOLS ➔</span>
+          </div>
+
+          <!-- Stack -->
+          <div class="mfd-stack-box">
+            <div class="stack-lbl">ALIGNMENT FRAMEWORKS &amp; INFRA:</div>
+            <div class="stack-val stack-green">TRL • DeepSpeed • vLLM • Agent Protocols</div>
+          </div>
+        </div>
+        <div class="mfd-footer">ROLE: LLM POST-TRAINING ARCHITECT</div>
+      </article>
+
+      <!-- MFD 03: SYSTEMS ENGINEERING & DIRECT COMMS -->
+      <article class="mfd-screen">
+        <div class="mfd-header mfd-purple">
+          <span class="beacon-dot"></span>
+          <span class="mfd-title">MFD_03 // SYSTEMS &amp; DIRECT COMMS</span>
+        </div>
+        <div class="mfd-body">
+          <!-- Card 1: OmniDeck -->
+          <div class="mfd-card card-purple" data-dossier="omnideck" title="Click to view OmniDeck telemetry specs">
+            <h3 class="card-title">OMNIDECK TELEMETRY ENGINE</h3>
+            <p class="card-sub">Low-Latency Win32 C-APIs &amp; NVML Streaming</p>
+            <p class="card-desc">&lt; 0.5% CPU Overhead • Kernel Hardware Streaming</p>
+            <span class="card-badge badge-purple">TAURI • PYTHON • REACT 18 ➔</span>
+          </div>
+
+          <!-- Comms Dispatch -->
+          <div class="mfd-card">
+            <h3 class="card-title">DIRECT QUANTUM COMMS</h3>
+            <div class="comms-link-row" style="margin-top: 4px;">
+              <span>✉️ MAIL:</span>
+              <a href="mailto:lathaihoa2003@gmail.com">lathaihoa2003@gmail.com</a>
+            </div>
+            <div class="comms-link-row" style="margin-top: 6px;">
+              <span>📞 CALL:</span>
+              <a href="tel:+84865254028">+84 865 254 028</a>
+            </div>
+          </div>
+
+          <!-- Stack -->
+          <div class="mfd-stack-box">
+            <div class="stack-lbl">DEPLOYMENT READINESS:</div>
+            <div class="stack-val stack-green">OPEN FOR ROLES // FULL-TIME &amp; R&amp;D</div>
+          </div>
+        </div>
+        <div class="mfd-footer">BASE LOCATION: CAN THO, VIETNAM</div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- ==================== 5. MODAL DOSSIER POPUP ==================== -->
+  <div class="modal-backdrop hidden" id="dossier-modal">
+    <div class="modal-shell">
+      <div class="modal-header">
+        <div class="modal-title" id="modal-title">DOSSIER</div>
+        <button class="modal-close" id="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-subtitle" id="modal-subtitle"></div>
+        <div id="modal-content-slot"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/audio_engine.js"></script>
+  <script src="js/space_engine.js"></script>
+  <script src="js/music_widget.js"></script>
+  <script src="js/bridge_app.js"></script>
+</body>
+</html>
