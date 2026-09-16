@@ -5,17 +5,18 @@
 
 <br/><br/>
 
-<!-- ==================== DYNAMIC SUB-ORBITAL TYPING BANNER ==================== -->
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=16&pause=1200&color=38BDF8&center=true&vCenter=true&random=false&width=750&height=32&lines=Navigating+the+Frontiers+of+Multimodal+AI+%26+Foundation+Models;Pioneering+Next-Gen+Vision-Language+Architectures+%26+Autonomous+Agents;Engineering+High-Performance+Edge+Systems+%26+Real-Time+Telemetry" alt="Suborbital Typing Stream" />
-</p>
+<!-- ==================== STARSHIP AVIONICS FLIGHT CONSOLE ==================== -->
+<img src="assets/cosmic_flight_console.svg" width="100%" alt="Zeus Starship Flight Avionics Console" />
 
-<!-- ==================== MISSION CONTROL BADGES ==================== -->
+<br/><br/>
+
+<!-- ==================== TACTICAL TRANSMISSION CONTROLS ==================== -->
 <p align="center">
-  <a href="mailto:lathaihoa2003@gmail.com"><img src="https://img.shields.io/badge/COMMUNICATION-lathaihoa2003%40gmail.com-080e21?style=for-the-badge&logo=gmail&logoColor=38BDF8&labelColor=030712" alt="Email" /></a>
-  <a href="https://github.com/Zeus-AIE"><img src="https://img.shields.io/badge/COORDINATES-Can_Tho,_Vietnam-080e21?style=for-the-badge&logo=googlemaps&logoColor=00F0FF&labelColor=030712" alt="Location" /></a>
-  <a href="https://github.com/Zeus-AIE"><img src="https://komarev.com/ghpvc/?username=Zeus-AIE&color=00F0FF&style=for-the-badge&label=RADAR+SCANS" alt="Profile Views" /></a>
-  <a href="https://github.com/Zeus-AIE?tab=repositories"><img src="https://img.shields.io/badge/ORBITAL_REPOS-PUBLIC-080e21?style=for-the-badge&logo=github&logoColor=818CF8&labelColor=030712" alt="Repositories" /></a>
+  <a href="mailto:lathaihoa2003@gmail.com"><img src="https://img.shields.io/badge/TRANSMIT_DISPATCH-lathaihoa2003%40gmail.com-00F0FF?style=for-the-badge&logo=gmail&logoColor=040714&labelColor=070e24" alt="Direct Comms Channel" /></a>
+  &nbsp;
+  <a href="https://github.com/Zeus-AIE?tab=repositories"><img src="https://img.shields.io/badge/ORBITAL_FLEET-BROWSE_REPOSITORIES-38BDF8?style=for-the-badge&logo=github&logoColor=040714&labelColor=070e24" alt="Fleet Repositories" /></a>
+  &nbsp;
+  <a href="https://github.com/Zeus-AIE"><img src="https://komarev.com/ghpvc/?username=Zeus-AIE&color=818CF8&style=for-the-badge&label=RADAR_SCANS" alt="Radar Scans" /></a>
 </p>
 
 </div>
