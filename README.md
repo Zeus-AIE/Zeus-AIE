@@ -7,7 +7,7 @@
 
 <!-- ==================== DYNAMIC SUB-ORBITAL TYPING BANNER ==================== -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=16&pause=1200&color=38BDF8&center=true&vCenter=true&random=false&width=700&height=32&lines=Transmitting+from+Sector+Earth+%2F%2F+Can+Tho+City%2C+Vietnam;Navigating+the+Frontiers+of+Multimodal+AI+%26+Deep+Learning;Architecting+Low-Latency+Systems+%26+Edge+Telemetry+Engines" alt="Suborbital Typing Stream" />
+  <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=16&pause=1200&color=38BDF8&center=true&vCenter=true&random=false&width=750&height=32&lines=Navigating+the+Frontiers+of+Multimodal+AI+%26+Foundation+Models;Pioneering+Next-Gen+Vision-Language+Architectures+%26+Autonomous+Agents;Engineering+High-Performance+Edge+Systems+%26+Real-Time+Telemetry" alt="Suborbital Typing Stream" />
 </p>
 
 <!-- ==================== MISSION CONTROL BADGES ==================== -->
@@ -27,10 +27,11 @@
 ```yaml
 Operator Identity : Lã Thái Hòa (Callsign: Zeus)
 Academic Station  : Can Tho University (CTU) — B.S. in Computer Science [GPA: 3.37 / 4.00]
-Core Speciality   : Multimodal AI (CV & NLP), Production RLHF, Low-Latency Edge Telemetry
-Neural Engines    : PhoBERT, Vision Transformers (ViT), ResNet50, EfficientNet, BiLSTM-CRF
-Safety Protocols  : Centific Acceptability v3.1, RLHF Evaluation, Win32 Kernel Architecture
-Deployment Status : Ready for Mission Briefing [Hireable: True]
+Core Focus        : Multimodal AI, Foundation Models, LLM Post-Training & Agentic Systems
+Architecture R&D  : Vision-Language Models, Deep Neural Networks, Scalable Edge Telemetry
+Alignment & Safety: RLHF Optimization, Data Annotation Protocols, Model Evaluation
+Systems Expertise : Low-Latency Win32 Kernel APIs, High-Performance Python & Full-Stack Systems
+Deployment Status : Primed for Advanced Engineering & Research Roles [Hireable: True]
 ```
 
 ---

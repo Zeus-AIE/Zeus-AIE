@@ -134,24 +134,24 @@
 
     <!-- Technical Roles -->
     <text x="0" y="92" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#E2E8F0" letter-spacing="1.2">
-      AI ENGINEER • DEEP LEARNING &amp; RLHF • SYSTEMS ARCHITECTURE
+      AI ENGINEER • MULTIMODAL DEEP LEARNING • SYSTEMS ARCHITECTURE
     </text>
 
     <!-- Mission Subtext -->
     <text x="0" y="116" font-family="'Space Grotesk', monospace" font-size="12" font-weight="400" fill="#64748B" letter-spacing="0.5">
-      Multimodal Vision-Language Models, Real-Time Telemetry &amp; Low-Latency Systems
+      Advancing Multimodal AI, Foundation Architectures &amp; High-Performance Edge Systems
     </text>
 
     <!-- Interactive Data Metric Badges -->
     <g transform="translate(0, 134)">
-      <rect x="0" y="0" width="130" height="26" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1" />
-      <text x="12" y="17" font-family="monospace" font-size="11" fill="#38BDF8">EDU: CTU (3.37)</text>
+      <rect x="0" y="0" width="168" height="26" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <text x="12" y="17" font-family="monospace" font-size="10.5" fill="#38BDF8">MULTIMODAL AI &amp; LLMs</text>
 
-      <rect x="142" y="0" width="160" height="26" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1" />
-      <text x="154" y="17" font-family="monospace" font-size="11" fill="#00F0FF">RLHF: CENTIFIC v3.1</text>
+      <rect x="180" y="0" width="180" height="26" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <text x="192" y="17" font-family="monospace" font-size="10.5" fill="#00F0FF">AI SAFETY &amp; ALIGNMENT</text>
 
-      <rect x="314" y="0" width="165" height="26" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1" />
-      <text x="326" y="17" font-family="monospace" font-size="11" fill="#818CF8">CORE: PhoBERT / ViT</text>
+      <rect x="372" y="0" width="175" height="26" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <text x="384" y="17" font-family="monospace" font-size="10.5" fill="#818CF8">SCALABLE EDGE SYSTEMS</text>
     </g>
   </g>
 
