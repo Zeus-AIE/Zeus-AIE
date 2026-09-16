@@ -60,7 +60,9 @@ A results-driven **AI Engineer & AI Data Specialist** and Computer Science gradu
 
 ---
 
-### Featured Projects
+### Featured Open-Source Projects
+
+#### [OmniDeck: Universal Hardware & Game HUD (v2.5 PRO)](https://github.com/Zeus-AIE/OmniDeck)
 
 <div align="center">
   <a href="https://github.com/Zeus-AIE/OmniDeck">
@@ -68,21 +70,21 @@ A results-driven **AI Engineer & AI Data Specialist** and Computer Science gradu
   </a>
 </div>
 
-<br/>
+* **Description**: Real-time Windows hardware telemetry engine and low-latency transparent in-game HUD overlay designed with an Apple Glassmorphism aesthetic.
+* **Architecture**: Tauri-level hybrid architecture utilizing Microsoft Edge WebView2, React 18 frontend, and native Python Win32 kernel & NVML C-APIs (<0.5% CPU overhead).
+* **Key Features**: Dynamic sensor discovery for Intel/AMD CPUs and NVIDIA/Radeon GPUs, dual-fan cooling RPM telemetry, and Catmull-Rom spline real-time charting with mouse-wheel zoom.
+* **Tech Stack**: `Python` • `React 18` • `TailwindCSS` • `WebView2` • `Framer Motion` • `Win32 C-API`
+* **Links**: [GitHub Repository](https://github.com/Zeus-AIE/OmniDeck) • [Documentation](https://github.com/Zeus-AIE/OmniDeck#readme)
 
-#### [OmniDeck: Universal Hardware & Game HUD v2.5 PRO](https://github.com/Zeus-AIE/OmniDeck)
-* High-performance Windows in-game monitoring HUD & telemetry engine with Apple Glassmorphism UI.
-* Built on **Python, Microsoft Edge WebView2, React 18, TailwindCSS**, and zero-latency Win32 C-APIs.
-* Features dynamic hardware sensor detection across **Intel/AMD CPUs**, **NVIDIA/Radeon GPUs**, and real-time dual-fan cooling RPM.
+---
 
-#### AI-based Automatic Segmentation of Cooking Video Steps *(Undergraduate Thesis)*
-* Researched and engineered a multimodal deep learning pipeline to segment complex cooking actions with high temporal precision.
-* Processed and evaluated **130 video datasets** with **1,110 distinct action segments**.
-* Fused multimodal architectures using **Vision Transformers (ViT), ResNet50, EfficientNet-B0, PhoBERT**, and **BiLSTM-CRF**.
+### Selected Research & Engineering Work
 
-#### Medical Diagnosis & Treatment Recommendation System *(CUSC)*
-* Fine-tuned and optimized a **PhoBERT NLP model** for Vietnamese medical text classification, achieving a **100% F1-score** across 29,000+ samples.
-* Implemented a full-stack Flask platform with MongoDB and Pandas, delivering sub-second real-time inference.
+* **Multimodal Action Step Segmentation in Cooking Videos** *(Undergraduate Thesis, Can Tho University)*  
+  Researched and built a multimodal temporal action segmentation pipeline across 130 video datasets (1,110 action segments) using Vision Transformers (ViT), ResNet50, EfficientNet-B0, PhoBERT, and BiLSTM-CRF.
+
+* **Medical Diagnosis & Treatment Recommendation System** *(Can Tho University Software Center - CUSC)*  
+  Fine-tuned a PhoBERT NLP classification pipeline across 29,000+ clinical records, achieving a 100% F1-score with sub-second real-time inference using Flask and MongoDB.
 
 ---
 
