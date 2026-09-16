@@ -15,43 +15,43 @@
 
 ---
 
-### 👨‍💻 About Me
+### About Me
 
 A results-driven **AI Engineer & AI Data Specialist** and Computer Science graduate from **Can Tho University (CTU)** with a rigorous foundation in deep learning pipelines, multimodal action understanding, and low-latency system development.
 
-* 🎓 **Education**: Bachelor of Science in Computer Science, **Can Tho University** (GPA: **3.37 / 4.00**, 2021 – 2026).
-* 🧠 **AI & Deep Learning Core**: Natural Language Processing (**PhoBERT**), Computer Vision (**Vision Transformers - ViT, ResNet50, EfficientNet**), and Multimodal Action Recognition.
-* 🛡️ **AI Evaluation & RLHF**: Proven track record in large-scale multimodal annotation, audio transcription, synthetic audio vetting, and strict adherence to **Centific Acceptability v3.1** and **RLHF taxonomies**.
-* ⚡ **Systems & Full-Stack**: Experienced in building robust, performant solutions with **Python, PyTorch, React 18, Node.js, Flask, MongoDB**, and Windows C-APIs.
+* **Education**: Bachelor of Science in Computer Science, **Can Tho University** (GPA: **3.37 / 4.00**, 2021 – 2026).
+* **AI & Deep Learning Core**: Natural Language Processing (**PhoBERT**), Computer Vision (**Vision Transformers - ViT, ResNet50, EfficientNet**), and Multimodal Action Recognition.
+* **AI Evaluation & RLHF**: Proven track record in large-scale multimodal annotation, audio transcription, synthetic audio vetting, and strict adherence to **Centific Acceptability v3.1** and **RLHF taxonomies**.
+* **Systems & Full-Stack**: Experienced in building robust, performant solutions with **Python, PyTorch, React 18, Node.js, Flask, MongoDB**, and Windows C-APIs.
 
 ---
 
-### 🛠️ Tech Stack & Core Competencies
+### Technical Competencies
 
 <br/>
 
-#### 🧠 Machine Learning, Deep Learning & Vision
+#### Machine Learning, Deep Learning & Vision
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,opencv,py,scikitlearn,fastapi,flask" alt="AI & ML Stack" />
   </a>
 </p>
 
-#### 💻 Programming Languages
+#### Programming Languages
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=py,c,cpp,java,js,ts,html,css" alt="Languages Stack" />
   </a>
 </p>
 
-#### 🌐 Web & Frontend Frameworks
+#### Web & Frontend Frameworks
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=react,vue,tailwind,nodejs,vite,bootstrap" alt="Web Stack" />
   </a>
 </p>
 
-#### 🗄️ Databases, Cloud & Development Tools
+#### Databases, Cloud & Development Tools
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=mongodb,postgres,mysql,sqlite,git,github,gitlab,linux,vscode,postman,docker" alt="Tools & DB Stack" />
@@ -60,7 +60,7 @@ A results-driven **AI Engineer & AI Data Specialist** and Computer Science gradu
 
 ---
 
-### 🚀 Featured Projects
+### Featured Projects
 
 <div align="center">
   <a href="https://github.com/Zeus-AIE/OmniDeck">
@@ -70,33 +70,33 @@ A results-driven **AI Engineer & AI Data Specialist** and Computer Science gradu
 
 <br/>
 
-#### 🎮 [OmniDeck: Universal Hardware & Game HUD v2.5 PRO](https://github.com/Zeus-AIE/OmniDeck)
+#### [OmniDeck: Universal Hardware & Game HUD v2.5 PRO](https://github.com/Zeus-AIE/OmniDeck)
 * High-performance Windows in-game monitoring HUD & telemetry engine with Apple Glassmorphism UI.
 * Built on **Python, Microsoft Edge WebView2, React 18, TailwindCSS**, and zero-latency Win32 C-APIs.
 * Features dynamic hardware sensor detection across **Intel/AMD CPUs**, **NVIDIA/Radeon GPUs**, and real-time dual-fan cooling RPM.
 
-#### 🍳 AI-based Automatic Segmentation of Cooking Video Steps *(Undergraduate Thesis)*
+#### AI-based Automatic Segmentation of Cooking Video Steps *(Undergraduate Thesis)*
 * Researched and engineered a multimodal deep learning pipeline to segment complex cooking actions with high temporal precision.
 * Processed and evaluated **130 video datasets** with **1,110 distinct action segments**.
 * Fused multimodal architectures using **Vision Transformers (ViT), ResNet50, EfficientNet-B0, PhoBERT**, and **BiLSTM-CRF**.
 
-#### 🏥 Medical Diagnosis & Treatment Recommendation System *(CUSC)*
+#### Medical Diagnosis & Treatment Recommendation System *(CUSC)*
 * Fine-tuned and optimized a **PhoBERT NLP model** for Vietnamese medical text classification, achieving a **100% F1-score** across 29,000+ samples.
 * Implemented a full-stack Flask platform with MongoDB and Pandas, delivering sub-second real-time inference.
 
 ---
 
-### 📜 Certifications & Honors
+### Certifications & Honors
 
-* 🇬🇧 **Aptis ESOL - B2** (English Certificate) — *British Council (2026)*
-* 🛡️ **Google Cybersecurity Professional Certificate** — *Coursera (2024)*
-* 🎨 **Google UX Design Professional Certificate** — *Coursera (2024)*
-* 🐍 **Python Professional Certificate** — *Kaggle (2024)*
-* 🏅 **Organizing Committee & Member** — *Youth Union Cadre Training Program, CTU (2023 – 2024)*
+* **Aptis ESOL - B2** (English Certificate) — *British Council (2026)*
+* **Google Cybersecurity Professional Certificate** — *Coursera (2024)*
+* **Google UX Design Professional Certificate** — *Coursera (2024)*
+* **Python Professional Certificate** — *Kaggle (2024)*
+* **Organizing Committee Member** — *Youth Union Cadre Training Program, CTU (2023 – 2024)*
 
 ---
 
-### 📊 GitHub Activity & Statistics
+### GitHub Activity & Statistics
 
 <div align="center">
 
@@ -113,8 +113,8 @@ A results-driven **AI Engineer & AI Data Specialist** and Computer Science gradu
 
 <div align="center">
 
-📫 **Let's Connect & Collaborate!**  
-Email: [lathaihoa2003@gmail.com](mailto:lathaihoa2003@gmail.com) • Phone: `(+84) 0865 254 028` • Can Tho City, Vietnam 🇻🇳
+**Contact & Inquiries**  
+Email: [lathaihoa2003@gmail.com](mailto:lathaihoa2003@gmail.com) • Phone: `(+84) 0865 254 028` • Can Tho City, Vietnam
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:60A5FA,50:00F0FF,100:0A84FF&height=90&section=footer" width="100%"/>
 
