@@ -1,73 +1,61 @@
-<div align="center">
+﻿<div align="center">
 
-<img src="assets/cosmic_banner.jpg" width="100%" alt="Cosmic Odyssey Starship & Deep Space" style="border-radius: 10px;" />
+<!-- ==================== ANIMATED COSMIC HUD COMMAND CONSOLE ==================== -->
+<img src="assets/cosmic_hud_header.svg" width="100%" alt="Zeus Cosmic Command Console" />
 
 <br/><br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=28&pause=1000&color=00F0FF&center=true&vCenter=true&random=false&width=650&height=45&lines=L%C3%83+TH%C3%81I+H%C3%92A+(ZEUS);AI+ENGINEER+%7C+AI+DATA+SPECIALIST;DEEP+LEARNING+%26+SYSTEMS" alt="Typing Banner" />
-
+<!-- ==================== DYNAMIC SUB-ORBITAL TYPING BANNER ==================== -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=16&pause=1200&color=38BDF8&center=true&vCenter=true&random=false&width=650&height=30&lines=Navigating+the+Frontiers+of+AI+%26+Deep+Learning;Architecting+Next-Gen+Computer+Vision+%26+NLP+Models;Engineering+High-Performance+Desktop+Telemetry" alt="Typing Subtitle" />
+  <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=16&pause=1200&color=38BDF8&center=true&vCenter=true&random=false&width=700&height=32&lines=Transmitting+from+Sector+Earth+%2F%2F+Can+Tho+City%2C+Vietnam;Navigating+the+Frontiers+of+Multimodal+AI+%26+Deep+Learning;Architecting+Low-Latency+Systems+%26+Edge+Telemetry+Engines" alt="Suborbital Typing Stream" />
 </p>
 
+<!-- ==================== MISSION CONTROL BADGES ==================== -->
 <p align="center">
-  <a href="mailto:lathaihoa2003@gmail.com"><img src="https://img.shields.io/badge/COMMUNICATION-lathaihoa2003%40gmail.com-0F172A?style=for-the-badge&logo=gmail&logoColor=38BDF8&labelColor=020617" alt="Email" /></a>
-  <a href="https://github.com/Zeus-AIE"><img src="https://img.shields.io/badge/COORDINATES-Can_Tho_City,_Vietnam-0F172A?style=for-the-badge&logo=googlemaps&logoColor=00F0FF&labelColor=020617" alt="Location" /></a>
-  <a href="https://github.com/Zeus-AIE"><img src="https://komarev.com/ghpvc/?username=Zeus-AIE&color=00F0FF&style=for-the-badge&label=ORBITAL+SCANS" alt="Profile Views" /></a>
+  <a href="mailto:lathaihoa2003@gmail.com"><img src="https://img.shields.io/badge/MISSION_CONTROL-lathaihoa2003%40gmail.com-080e21?style=for-the-badge&logo=gmail&logoColor=38BDF8&labelColor=030712" alt="Email" /></a>
+  <a href="https://github.com/Zeus-AIE"><img src="https://img.shields.io/badge/COORDINATES-Can_Tho,_Vietnam-080e21?style=for-the-badge&logo=googlemaps&logoColor=00F0FF&labelColor=030712" alt="Location" /></a>
+  <a href="https://github.com/Zeus-AIE"><img src="https://komarev.com/ghpvc/?username=Zeus-AIE&color=00F0FF&style=for-the-badge&label=RADAR+SCANS" alt="Profile Views" /></a>
+  <a href="https://github.com/Zeus-AIE?tab=repositories"><img src="https://img.shields.io/badge/ORBITAL_REPOS-PUBLIC-080e21?style=for-the-badge&logo=github&logoColor=818CF8&labelColor=030712" alt="Repositories" /></a>
 </p>
 
 </div>
 
 ---
 
-### Mission Briefing
+### 🛰️ Mission Parameters // System Specification
 
-A results-driven **AI Engineer & AI Data Specialist** and Computer Science graduate from **Can Tho University (CTU)** with a rigorous foundation in deep learning architectures, multimodal action understanding, and high-performance system telemetry.
-
-* **Academic Base**: Bachelor of Science in Computer Science, **Can Tho University** (GPA: **3.37 / 4.00**, 2021 – 2026).
-* **AI & Deep Learning Core**: Natural Language Processing (**PhoBERT**), Computer Vision (**Vision Transformers - ViT, ResNet50, EfficientNet**), and Multimodal Action Recognition.
-* **AI Evaluation & RLHF**: Proven production experience in large-scale multimodal annotation, speech transcription verification, and strict compliance with **Centific Acceptability v3.1** and **RLHF taxonomies**.
-* **Systems & Full-Stack**: Experienced in architecting robust, low-latency software solutions with **Python, PyTorch, React 18, Node.js, Flask, MongoDB**, and Windows C-APIs.
-
----
-
-### Orbital Tech Constellation
-
-<br/>
-
-#### Machine Learning, Deep Learning & Vision
-<p align="left">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,opencv,py,scikitlearn,fastapi,flask" alt="AI & ML Stack" />
-  </a>
-</p>
-
-#### Core Programming Languages
-<p align="left">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,c,cpp,java,js,ts,html,css" alt="Languages Stack" />
-  </a>
-</p>
-
-#### Web & Systems Frameworks
-<p align="left">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=react,vue,tailwind,nodejs,vite,bootstrap" alt="Web Stack" />
-  </a>
-</p>
-
-#### Databases, Cloud & Telemetry Tooling
-<p align="left">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=mongodb,postgres,mysql,sqlite,git,github,gitlab,linux,vscode,postman,docker" alt="Tools & DB Stack" />
-  </a>
-</p>
+```yaml
+Operator Identity : Lã Thái Hòa (Callsign: Zeus)
+Academic Station  : Can Tho University (CTU) — B.S. in Computer Science [GPA: 3.37 / 4.00]
+Core Speciality   : Multimodal AI (CV & NLP), Production RLHF, Low-Latency Edge Telemetry
+Neural Engines    : PhoBERT, Vision Transformers (ViT), ResNet50, EfficientNet, BiLSTM-CRF
+Safety Protocols  : Centific Acceptability v3.1, RLHF Evaluation, Win32 Kernel Architecture
+Deployment Status : Ready for Mission Briefing [Hireable: True]
+```
 
 ---
 
-### Flagship Open-Source Project
+### 🌌 Orbital Tech Constellation
 
-#### [OmniDeck: Universal Hardware & Game HUD (v2.5 PRO)](https://github.com/Zeus-AIE/OmniDeck)
+<div align="center">
+
+#### Neural Networks & Machine Learning
+<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=pytorch,tensorflow,opencv,py,scikitlearn,fastapi,flask" alt="AI & ML Stack" /></a>
+
+#### Core Engineering Languages
+<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=py,c,cpp,java,js,ts,html,css" alt="Languages Stack" /></a>
+
+#### Systems & Web Frameworks
+<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=react,vue,tailwind,nodejs,vite,bootstrap" alt="Web Stack" /></a>
+
+#### Telemetry, Databases & Cloud Tooling
+<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=mongodb,postgres,mysql,sqlite,git,github,gitlab,linux,vscode,postman,docker" alt="Tools & DB Stack" /></a>
+
+</div>
+
+---
+
+### 🚀 Flagship Mission // OmniDeck v2.5 PRO
 
 <div align="center">
   <a href="https://github.com/Zeus-AIE/OmniDeck">
@@ -75,32 +63,57 @@ A results-driven **AI Engineer & AI Data Specialist** and Computer Science gradu
   </a>
 </div>
 
-* **Description**: Real-time Windows hardware telemetry engine and low-latency transparent in-game HUD overlay designed with an Apple Glassmorphism aesthetic.
-* **Architecture**: Tauri-level hybrid architecture utilizing Microsoft Edge WebView2, React 18 frontend, and native Python Win32 kernel & NVML C-APIs (<0.5% CPU overhead).
-* **Telemetry Sensors**: Dynamic auto-discovery for Intel/AMD CPUs, NVIDIA/Radeon GPUs, dual-fan cooling RPM telemetry, and Catmull-Rom spline real-time charting with mouse-wheel zoom.
-* **Tech Stack**: `Python` • `React 18` • `TailwindCSS` • `WebView2` • `Framer Motion` • `Win32 C-API`
-* **Links**: [GitHub Repository](https://github.com/Zeus-AIE/OmniDeck) • [Documentation](https://github.com/Zeus-AIE/OmniDeck#readme)
+<br/>
+
+<details open>
+  <summary><b>📡 [ MISSION TELEMETRY: OMNIDECK SPECIFICATIONS ]</b> <i>(Click to expand/collapse)</i></summary>
+
+  <br/>
+
+  * **Mission Profile**: Real-time Windows hardware telemetry engine and ultra-low latency transparent in-game HUD overlay engineered with an Apple Glassmorphism aesthetic.
+  * **Propulsion & Architecture**: Tauri-level hybrid architecture uniting **React 18 + TailwindCSS + Framer Motion** with native **Python Win32 C-APIs & NVML kernel memory streams** (<0.5% CPU load).
+  * **Sensor Arrays**: Universal auto-discovery across **Intel/AMD CPUs**, **NVIDIA/Radeon GPUs**, dual-fan cooling RPM telemetry, and Catmull-Rom spline real-time charting with interactive mouse-wheel zoom.
+  * **Direct Access**: [Explore Source Code](https://github.com/Zeus-AIE/OmniDeck) • [Technical Documentation](https://github.com/Zeus-AIE/OmniDeck#readme)
+
+</details>
 
 ---
 
-### Selected Research & Engineering Work
+### 🔬 Selected Research & Engineering Work
 
-* **Multimodal Action Step Segmentation in Cooking Videos** *(Undergraduate Thesis — Can Tho University)*
-* **Medical Diagnosis & Treatment Recommendation Platform** *(Can Tho University Software Center — CUSC)*
+<details open>
+  <summary><b>🛰️ [ ACCESS CLASSIFIED R&D MISSIONS ]</b> <i>(Click to expand/collapse)</i></summary>
+
+  <br/>
+
+  * **Multimodal Action Step Segmentation in Cooking Videos**  
+    *Context: Undergraduate Thesis — Can Tho University (CTU)*
+
+  * **Medical Diagnosis & Treatment Recommendation Platform**  
+    *Context: Can Tho University Software Center (CUSC)*
+
+</details>
 
 ---
 
-### Certifications & Accreditations
+### 🎖️ Flight Accreditations & Certifications
 
-* **Aptis ESOL - B2** (English Certificate) — *British Council (2026)*
-* **Google Cybersecurity Professional Certificate** — *Coursera (2024)*
-* **Google UX Design Professional Certificate** — *Coursera (2024)*
-* **Python Professional Certificate** — *Kaggle (2024)*
-* **Organizing Committee Member** — *Youth Union Cadre Training Program, CTU (2023 – 2024)*
+<details>
+  <summary><b>📜 [ VERIFY PROFESSIONAL CREDENTIALS ]</b> <i>(Click to expand/collapse)</i></summary>
+
+  <br/>
+
+  * **Aptis ESOL - B2** (English Proficiency Certificate) — *British Council (2026)*
+  * **Google Cybersecurity Professional Certificate** — *Coursera (2024)*
+  * **Google UX Design Professional Certificate** — *Coursera (2024)*
+  * **Python Professional Certificate** — *Kaggle (2024)*
+  * **Youth Union Cadre Training Program** — *Can Tho University (2023 – 2024)*
+
+</details>
 
 ---
 
-### Telemetry & Spaceflight Metrics
+### 📊 Orbital Telemetry & Real-Time Metrics
 
 <div align="center">
 
