@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- ==================== UNIFIED COSMIC STARSHIP COMMAND BRIDGE ==================== -->
-<img src="assets/cosmic_command_bridge_v2.svg" width="100%" alt="Zeus Cosmic Starship Command Bridge" />
+<img src="assets/cosmic_command_bridge_v3.svg" width="100%" alt="Zeus Cosmic Starship Command Bridge" />
 
 <br/><br/>
 
