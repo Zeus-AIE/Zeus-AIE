@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- ==================== ANIMATED COSMIC HUD COMMAND CONSOLE ==================== -->
-<img src="assets/cosmic_hud_header.svg" width="100%" alt="Zeus Cosmic Command Console" />
+<img src="assets/cosmic_hud_header_v2.svg" width="100%" alt="Zeus Cosmic Command Console" />
 
 <br/><br/>
 
