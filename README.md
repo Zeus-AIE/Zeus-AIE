@@ -55,25 +55,30 @@ A results-driven **AI Engineer & Systems Developer** and Computer Science gradua
 
 ---
 
-### Flagship Project: OmniDeck
+### Flagship Engineering Projects
 
 <div align="center">
   <a href="https://github.com/Zeus-AIE/OmniDeck">
-    <img src="https://github-stats-extended.vercel.app/api/pin/?username=Zeus-AIE&repo=OmniDeck&bg_color=050814&title_color=00F0FF&icon_color=38BDF8&text_color=E2E8F0&hide_border=true" alt="OmniDeck Repository Card" />
+    <img src="https://github-stats-extended.vercel.app/api/pin/?username=Zeus-AIE&repo=OmniDeck&bg_color=050814&title_color=00F0FF&icon_color=38BDF8&text_color=E2E8F0&hide_border=true" alt="OmniDeck Repository Card" width="48%" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Zeus-AIE/VGVDTranslator">
+    <img src="https://github-stats-extended.vercel.app/api/pin/?username=Zeus-AIE&repo=VGVDTranslator&bg_color=050814&title_color=00F0FF&icon_color=38BDF8&text_color=E2E8F0&hide_border=true" alt="VGVDTranslator Repository Card" width="48%" />
   </a>
 </div>
 
 <br/>
 
 <details open>
-  <summary><b>OmniDeck Architecture & Telemetry Specifications</b> <i>(Click to expand/collapse)</i></summary>
+  <summary><b>Featured System Architectures</b> <i>(Click to expand/collapse)</i></summary>
 
   <br/>
 
-  * **Mission Profile**: Real-time Windows hardware telemetry engine and ultra-low latency transparent in-game HUD overlay engineered with an Apple Glassmorphism aesthetic.
-  * **Propulsion & Architecture**: Tauri-level hybrid architecture uniting **React 18 + TailwindCSS + Framer Motion** with native **Python Win32 C-APIs & NVML kernel memory streams** (<0.5% CPU load).
-  * **Sensor Arrays**: Universal auto-discovery across **Intel/AMD CPUs**, **NVIDIA/Radeon GPUs**, dual-fan cooling RPM telemetry, and Catmull-Rom spline real-time charting with interactive mouse-wheel zoom.
-  * **Direct Access**: [Explore Source Code](https://github.com/Zeus-AIE/OmniDeck) • [Technical Documentation](https://github.com/Zeus-AIE/OmniDeck#readme)
+  * **OmniDeck (Windows Telemetry HUD)**: Real-time hardware telemetry engine & transparent in-game HUD uniting **React 18 + TailwindCSS** with native **Python Win32 C-APIs & NVML kernel memory streams** (<0.5% CPU load).  
+    ➔ [Source Code](https://github.com/Zeus-AIE/OmniDeck) • [Documentation](https://github.com/Zeus-AIE/OmniDeck#readme)
+
+  * **VGVD Translator (Real-Time In-Game Screen Translator)**: Real-time Android screen translation application for *Honor of Kings (Vương Giả Vinh Diệu)* utilizing **Google ML Kit (On-Device Chinese OCR)**, **Gemini Flash AI**, and an offline **MOBA Domain Dictionary**. Features floating bubble controls and non-intrusive transparent HUD overlay.  
+    ➔ [Source Code](https://github.com/Zeus-AIE/VGVDTranslator) • [Documentation](https://github.com/Zeus-AIE/VGVDTranslator#readme)
 
 </details>
 
