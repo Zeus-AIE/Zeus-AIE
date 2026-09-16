@@ -153,13 +153,12 @@
         55%, 100% { transform: translate(782px, 107px) scale(0); opacity: 0; }
       }
       @keyframes asteroidFlight {
-        0% { transform: translate(840px, 92px) rotate(0deg) scale(0.5); opacity: 0; }
-        15% { transform: translate(820px, 97px) rotate(45deg) scale(0.85); opacity: 0.95; }
-        35% { transform: translate(798px, 103px) rotate(110deg) scale(1); opacity: 1; }
-        50% { transform: translate(780px, 108px) rotate(160deg) scale(1); opacity: 1; }
-        51% { transform: translate(780px, 108px) rotate(165deg) scale(1.3); opacity: 1; filter: brightness(3); }
-        54% { transform: translate(780px, 108px) rotate(180deg) scale(0); opacity: 0; }
-        100% { transform: translate(780px, 108px) scale(0); opacity: 0; }
+        0% { transform: translate(840px, 92px) rotate(0deg) scale(0.6); opacity: 0; }
+        12% { transform: translate(824px, 96px) rotate(35deg) scale(0.9); opacity: 1; }
+        35% { transform: translate(802px, 102px) rotate(95deg) scale(1); opacity: 1; }
+        50% { transform: translate(780px, 108px) rotate(150deg) scale(1); opacity: 1; }
+        51% { transform: translate(780px, 108px) rotate(155deg) scale(1.3); opacity: 1; filter: brightness(3); }
+        54%, 100% { transform: translate(780px, 108px) rotate(170deg) scale(0); opacity: 0; }
       }
       @keyframes explosionShockwave {
         0%, 49% { transform: translate(780px, 108px) scale(0); opacity: 0; }
@@ -187,11 +186,13 @@
         80%, 100% { transform: translate(790px, 153px) rotate(240deg) scale(0); opacity: 0; }
       }
 
+      /* Centered Local Origin (0,0) - 100% Concentric, Zero Wobble */
+      .orbit-1 { transform-origin: 0px 0px; animation: rotateClockwise 20s linear infinite; }
+      .orbit-2 { transform-origin: 0px 0px; animation: rotateCounter 30s linear infinite; }
+      .orbit-3 { transform-origin: 0px 0px; animation: rotateClockwise 10s linear infinite; }
+      .radar-line { transform-origin: 0px 0px; animation: radarSweep 6s linear infinite; }
+
       .hud-scanline { animation: laserScan 7s ease-in-out infinite; }
-      .orbit-1 { transform-origin: 855px 179px; animation: rotateClockwise 20s linear infinite; }
-      .orbit-2 { transform-origin: 855px 179px; animation: rotateCounter 30s linear infinite; }
-      .orbit-3 { transform-origin: 855px 179px; animation: rotateClockwise 10s linear infinite; }
-      .radar-line { transform-origin: 855px 179px; animation: radarSweep 6s linear infinite; }
       .starship-cruising { animation: starshipCruising 4.5s ease-in-out infinite; }
       .thruster-jet { transform-origin: -8px 18px; animation: thrusterPlasma 0.4s ease-in-out infinite alternate; }
       .beacon-light { animation: beaconBlink 1.4s ease-in-out infinite; }
@@ -348,33 +349,41 @@
       </g>
     </g>
 
-    <!-- 3. Planetary Satellite Radar (Right Side, Centered at cx=815, cy=115) -->
-    <g transform="translate(0, 0)">
-      <!-- Planetary Core with Atmospheric Glow -->
-      <circle cx="815" cy="115" r="32" fill="#050d26" stroke="#00F0FF" stroke-width="2" filter="url(#glow-blue)" />
-      <circle cx="815" cy="115" r="22" fill="#0a1845" />
-      <circle cx="807" cy="107" r="10" fill="#00F0FF" fill-opacity="0.2" />
+    <!-- 3. Planetary Satellite Radar (100% Concentric at Local Origin (0,0), translate(815, 115)) -->
+    <g transform="translate(815, 115)">
+      <!-- Planetary Core with Atmospheric Glow (Static centered at 0, 0) -->
+      <circle cx="0" cy="0" r="32" fill="#050d26" stroke="#00F0FF" stroke-width="2" filter="url(#glow-blue)" />
+      <circle cx="0" cy="0" r="22" fill="#0a1845" />
+      <circle cx="-8" cy="-8" r="10" fill="#00F0FF" fill-opacity="0.2" />
 
-      <!-- Orbital Rings -->
-      <ellipse cx="815" cy="115" rx="84" ry="36" fill="none" stroke="url(#ring-grad)" stroke-width="1.8" stroke-dasharray="12 6 4 6" class="orbit-1" filter="url(#glow-cyan)" />
-      <circle cx="815" cy="115" r="90" fill="none" stroke="#1e293b" stroke-width="1" />
-      <circle cx="815" cy="115" r="90" fill="none" stroke="#00F0FF" stroke-width="1.5" stroke-dasharray="30 90 20 40" stroke-opacity="0.6" class="orbit-2" />
+      <!-- Radar Crosshairs (Static centered at 0, 0) -->
+      <line x1="-90" y1="0" x2="90" y2="0" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.25" stroke-dasharray="4 4" />
+      <line x1="0" y1="-90" x2="0" y2="90" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.25" stroke-dasharray="4 4" />
 
-      <!-- Orbit 3: Drone Satellite -->
-      <g class="orbit-3">
-        <circle cx="815" cy="60" r="3.5" fill="#00F0FF" filter="url(#glow-cyan)" />
-        <line x1="815" y1="60" x2="815" y2="115" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.4" stroke-dasharray="2 2" />
+      <!-- Orbit 1: Tilted Ellipse Ring (Rotating concentric around 0, 0) -->
+      <g class="orbit-1">
+        <ellipse cx="0" cy="0" rx="84" ry="36" fill="none" stroke="url(#ring-grad)" stroke-width="1.8" stroke-dasharray="12 6 4 6" filter="url(#glow-cyan)" />
       </g>
 
-      <!-- Radar Crosshairs (Symmetrical 180px length centered at 815, 115) -->
-      <line x1="725" y1="115" x2="905" y2="115" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.25" stroke-dasharray="4 4" />
-      <line x1="815" y1="25" x2="815" y2="205" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.25" stroke-dasharray="4 4" />
+      <!-- Orbit 2: Outer Circular Radar Ring (Rotating concentric around 0, 0) -->
+      <circle cx="0" cy="0" r="90" fill="none" stroke="#1e293b" stroke-width="1" />
+      <g class="orbit-2">
+        <circle cx="0" cy="0" r="90" fill="none" stroke="#00F0FF" stroke-width="1.5" stroke-dasharray="30 90 20 40" stroke-opacity="0.6" />
+      </g>
 
-      <!-- Sweeping Radar Sector Line -->
-      <line x1="815" y1="115" x2="900" y2="48" stroke="#00F0FF" stroke-width="1.6" stroke-opacity="0.85" class="radar-line" filter="url(#glow-cyan)" />
+      <!-- Orbit 3: Drone Satellite (Rotating concentric around 0, 0) -->
+      <g class="orbit-3">
+        <circle cx="0" cy="-55" r="3.5" fill="#00F0FF" filter="url(#glow-cyan)" />
+        <line x1="0" y1="-55" x2="0" y2="0" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.4" stroke-dasharray="2 2" />
+      </g>
 
-      <!-- Reticle Telemetry Label -->
-      <text x="815" y="178" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8.5" fill="#00F0FF" letter-spacing="1.5" opacity="0.9">ORBIT_RADAR // 360° TELEMETRY</text>
+      <!-- Sweeping Radar Sector Line (Rotating concentric around 0, 0) -->
+      <g class="radar-line">
+        <line x1="0" y1="0" x2="85" y2="-67" stroke="#00F0FF" stroke-width="1.6" stroke-opacity="0.85" filter="url(#glow-cyan)" />
+      </g>
+
+      <!-- Reticle Telemetry Label (Static centered at 0) -->
+      <text x="0" y="63" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8.5" fill="#00F0FF" letter-spacing="1.5" opacity="0.9">ORBIT_RADAR // 360° TELEMETRY</text>
     </g>
 
     <!-- 4. Combat Elements: Asteroids (Bug), Lasers, Explosions, Ship -->

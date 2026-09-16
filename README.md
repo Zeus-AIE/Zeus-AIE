@@ -2,7 +2,7 @@
 
 <!-- ==================== UNIFIED COSMIC STARSHIP COMMAND BRIDGE ==================== -->
 <a href="https://zeus-aie.github.io/Zeus-AIE/">
-  <img src="assets/cosmic_command_bridge_v8.svg" width="100%" alt="Zeus Cosmic Starship Command Bridge" />
+  <img src="assets/cosmic_command_bridge_v9.svg" width="100%" alt="Zeus Cosmic Starship Command Bridge" />
 </a>
 
 <br/>
