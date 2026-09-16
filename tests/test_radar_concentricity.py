@@ -4,9 +4,9 @@ import xml.etree.ElementTree as ET
 import sys
 
 def run_tests():
-    svg_path = r"C:\Users\ADMIN\.gemini\antigravity\scratch\github_profile\assets\cosmic_command_bridge_v9.svg"
+    svg_path = r"C:\Users\ADMIN\.gemini\antigravity\scratch\github_profile\assets\cosmic_command_bridge_v10.svg"
     failures = []
-    total_tests = 5
+    total_tests = 6
     passed_tests = 0
 
     # 1. XML Well-Formedness
@@ -36,14 +36,8 @@ def run_tests():
         # Core circles at (0, 0)
         assert '<circle cx="0" cy="0" r="32"' in inner, "Planetary core not centered at (0, 0)"
         assert '<circle cx="0" cy="0" r="22"' in inner, "Planetary atmosphere not centered at (0, 0)"
-        
-        # Ellipse at (0, 0)
         assert '<ellipse cx="0" cy="0" rx="84" ry="36"' in inner, "Orbital ellipse not centered at (0, 0)"
-        
-        # Radar ring at (0, 0)
         assert '<circle cx="0" cy="0" r="90"' in inner, "Outer radar circle not centered at (0, 0)"
-
-        # Crosshairs centered at 0
         assert 'x1="-90" y1="0" x2="90" y2="0"' in inner, "Horizontal crosshair not centered at 0"
         assert 'x1="0" y1="-90" x2="0" y2="90"' in inner, "Vertical crosshair not centered at 0"
 
@@ -60,13 +54,10 @@ def run_tests():
 
     # 3. Test Transform Origin Zero (Concentric Rotation)
     try:
-        # Check CSS rules
         assert re.search(r'\.orbit-1\s*\{\s*transform-origin:\s*0px\s*0px', content) or re.search(r'\.orbit-1\s*\{\s*transform-origin:\s*0\s*0', content), "orbit-1 transform-origin is not 0px 0px"
         assert re.search(r'\.orbit-2\s*\{\s*transform-origin:\s*0px\s*0px', content) or re.search(r'\.orbit-2\s*\{\s*transform-origin:\s*0\s*0', content), "orbit-2 transform-origin is not 0px 0px"
         assert re.search(r'\.orbit-3\s*\{\s*transform-origin:\s*0px\s*0px', content) or re.search(r'\.orbit-3\s*\{\s*transform-origin:\s*0\s*0', content), "orbit-3 transform-origin is not 0px 0px"
         assert re.search(r'\.radar-line\s*\{\s*transform-origin:\s*0px\s*0px', content) or re.search(r'\.radar-line\s*\{\s*transform-origin:\s*0\s*0', content), "radar-line transform-origin is not 0px 0px"
-        
-        # Ensure obsolete offset 855px 179px is completely gone
         assert '855px 179px' not in content, "Obsolete offset 855px 179px still present in CSS"
 
         passed_tests += 1
@@ -80,15 +71,8 @@ def run_tests():
             "suggested_fix": "Set transform-origin: 0px 0px on all rotating radar classes"
         })
 
-    # 4. Test Bounds Containment (Radar does not exceed Upper Deck panel)
+    # 4. Test Bounds Containment
     try:
-        # Upper deck panel: X=40..960, Y=64..290
-        # Radar center in root coords: X = 40 + 815 = 855, Y = 64 + 115 = 179
-        # Max radius = 90px
-        # Max X extent = 855 + 90 = 945 <= 960 (15px margin to right edge)
-        # Min X extent = 855 - 90 = 765 >= 40
-        # Max Y extent = 179 + 90 = 269 <= 290 (21px margin to bottom edge)
-        # Min Y extent = 179 - 90 = 89 >= 64 (25px margin to top edge)
         radar_x = 40 + 815
         radar_y = 64 + 115
         max_r = 90
@@ -120,6 +104,27 @@ def run_tests():
             "error_message": str(e),
             "reproduction_input": {"target": "asteroid-target"},
             "suggested_fix": "Add [TARGET: BUG-01] and #404_MEM_LEAK to asteroid-target group"
+        })
+
+    # 6. Test Target Reticle Upright (Does NOT rotate with asteroid rock)
+    try:
+        flight_kf = re.search(r'@keyframes asteroidFlight\s*\{(.*?)\}', content, re.DOTALL)
+        assert flight_kf is not None, "@keyframes asteroidFlight not found"
+        flight_body = flight_kf.group(1)
+        assert 'rotate(' not in flight_body, "asteroidFlight must NOT contain rotate(...); trajectory must keep reticle level"
+
+        assert '.asteroid-spin' in content, ".asteroid-spin class missing"
+        assert 'asteroidTumble' in content, "asteroidTumble animation missing"
+        assert '<g class="reticle-hud">' in content, "reticle-hud group missing"
+        passed_tests += 1
+    except AssertionError as e:
+        failures.append({
+            "test_name": "test_target_reticle_upright",
+            "error_type": "AssertionError",
+            "location_line": 0,
+            "error_message": str(e),
+            "reproduction_input": {"flight_body": flight_body if 'flight_body' in locals() else ""},
+            "suggested_fix": "Remove rotate from asteroidFlight and isolate rock rotation to .asteroid-spin"
         })
 
     result = {
