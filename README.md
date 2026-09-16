@@ -1,12 +1,7 @@
 <div align="center">
 
-<!-- ==================== ANIMATED COSMIC HUD COMMAND CONSOLE ==================== -->
-<img src="assets/cosmic_hud_header_v4.svg" width="100%" alt="Zeus Cosmic Command Console" />
-
-<br/><br/>
-
-<!-- ==================== STARSHIP AVIONICS FLIGHT CONSOLE ==================== -->
-<img src="assets/cosmic_flight_console.svg" width="100%" alt="Zeus Starship Flight Avionics Console" />
+<!-- ==================== UNIFIED COSMIC STARSHIP COMMAND BRIDGE ==================== -->
+<img src="assets/cosmic_command_bridge.svg" width="100%" alt="Zeus Cosmic Starship Command Bridge" />
 
 <br/><br/>
 

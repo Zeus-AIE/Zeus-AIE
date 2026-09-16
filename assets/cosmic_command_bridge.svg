@@ -1,0 +1,393 @@
+<svg width="100%" height="520" viewBox="0 0 920 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Deep Space Background Gradients -->
+    <linearGradient id="bridge-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030713" />
+      <stop offset="50%" stop-color="#070d22" />
+      <stop offset="100%" stop-color="#02050c" />
+    </linearGradient>
+
+    <linearGradient id="viewport-glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e1b3d" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#050c1f" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="screen-glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b1736" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#040919" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Ion Plasma Exhaust Gradient -->
+    <linearGradient id="thruster-glow" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95" />
+      <stop offset="25%" stop-color="#00F0FF" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#38BDF8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Neon Glow Filters -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-pulse" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Radar Sweep Gradient -->
+    <linearGradient id="sweep-cone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Fine Avionics Grid Pattern -->
+    <pattern id="bridge-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00F0FF" stroke-width="0.5" stroke-opacity="0.04" />
+      <circle cx="0" cy="0" r="0.6" fill="#00F0FF" fill-opacity="0.12" />
+    </pattern>
+
+    <!-- Animations -->
+    <style>
+      @keyframes laserScan {
+        0% { transform: translateY(0); opacity: 0; }
+        15% { opacity: 0.45; }
+        85% { opacity: 0.45; }
+        100% { transform: translateY(490px); opacity: 0; }
+      }
+      @keyframes shipCruising {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-3px) rotate(0.4deg); }
+      }
+      @keyframes thrusterPlasma {
+        0%, 100% { transform: scaleX(1); opacity: 0.85; }
+        50% { transform: scaleX(1.35); opacity: 1; }
+      }
+      @keyframes radarSweep {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes beaconBlink {
+        0%, 100% { opacity: 0.25; }
+        50% { opacity: 1; }
+      }
+      @keyframes beaconWave {
+        0% { transform: scale(0.8); opacity: 0.9; }
+        100% { transform: scale(2.2); opacity: 0; }
+      }
+      @keyframes conduitFlow {
+        0% { stroke-dashoffset: 60; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      .hud-scanline { animation: laserScan 6s ease-in-out infinite; }
+      .starship-float { animation: shipCruising 4.5s ease-in-out infinite; }
+      .ion-plume { transform-origin: 670px 120px; animation: thrusterPlasma 0.25s infinite alternate; }
+      .radar-sweep-beam { transform-origin: 460px 355px; animation: radarSweep 7s linear infinite; }
+      .beacon-light { animation: beaconBlink 1.4s ease-in-out infinite; }
+      .beacon-ring { transform-origin: 460px 375px; animation: beaconWave 2s ease-out infinite; }
+      .conduit-line { stroke-dasharray: 6 4; animation: conduitFlow 2s linear infinite; }
+    </style>
+  </defs>
+
+  <!-- ==================== MAIN CHASSIS & COCKPIT SHELL ==================== -->
+  <rect width="920" height="520" rx="14" fill="url(#bridge-bg)" stroke="#1e293b" stroke-width="1.5" />
+  <rect width="920" height="520" rx="14" fill="url(#bridge-grid)" />
+
+  <!-- Corner Brackets (HUD Tech Accents) -->
+  <path d="M 20 40 L 20 20 L 40 20" stroke="#00F0FF" stroke-width="2.5" fill="none" opacity="0.8" />
+  <path d="M 900 40 L 900 20 L 880 20" stroke="#00F0FF" stroke-width="2.5" fill="none" opacity="0.8" />
+  <path d="M 20 480 L 20 500 L 40 500" stroke="#00F0FF" stroke-width="2.5" fill="none" opacity="0.8" />
+  <path d="M 900 480 L 900 500 L 880 500" stroke="#00F0FF" stroke-width="2.5" fill="none" opacity="0.8" />
+
+  <!-- Scanning Laser Line -->
+  <line x1="10" y1="15" x2="910" y2="15" stroke="#00F0FF" stroke-width="1" opacity="0.4" filter="url(#glow-cyan)" class="hud-scanline" />
+
+  <!-- ==================== TOP STATUS RIBBON ==================== -->
+  <g transform="translate(25, 18)">
+    <rect x="0" y="0" width="870" height="24" rx="4" fill="#060c20" stroke="#1e293b" stroke-width="0.8" />
+    <!-- Left Indicator -->
+    <circle cx="14" cy="12" r="3.5" fill="#00F0FF" class="beacon-light" />
+    <text x="24" y="15" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#00F0FF" letter-spacing="1.2">TACTICAL SYS: ONLINE</text>
+    <text x="175" y="15" font-family="'Space Grotesk', monospace" font-size="8.5" fill="#64748B">//</text>
+    <text x="190" y="15" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#38BDF8" letter-spacing="1">DEFENSE LEVEL: 1</text>
+
+    <!-- Center Badge -->
+    <text x="435" y="15" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="9.5" font-weight="800" fill="#E2E8F0" letter-spacing="2">STARSHIP COMMAND BRIDGE // ZEUS-01</text>
+
+    <!-- Right Base Coordinates -->
+    <rect x="670" y="3" width="195" height="18" rx="3" fill="#0a1533" stroke="#00F0FF" stroke-width="0.5" stroke-opacity="0.4" />
+    <circle cx="678" cy="12" r="2.5" fill="#10B981" />
+    <text x="686" y="15" font-family="'Space Grotesk', monospace" font-size="8.5" font-weight="700" fill="#38BDF8" letter-spacing="0.8">CAN THO [10.0452°N, 105.7469°E]</text>
+  </g>
+
+  <!-- ==================== UPPER FLIGHT DECK: PILOT & INTERCEPTOR ==================== -->
+  <g transform="translate(25, 52)">
+    <!-- Viewport Panel Container -->
+    <rect width="870" height="142" rx="10" fill="url(#viewport-glass)" stroke="#334155" stroke-width="1" />
+    <path d="M 0 10 Q 0 0 10 0 L 860 0 Q 870 0 870 10 L 870 26 L 0 26 Z" fill="#081430" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.3" />
+    
+    <!-- Header Bar Info -->
+    <rect x="14" y="9" width="8" height="8" rx="2" fill="#00F0FF" class="beacon-light" />
+    <text x="28" y="16" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#00F0FF" letter-spacing="1.5">PILOT IN COMMAND // PRIMARY FLIGHT VIEWPORT</text>
+    <text x="856" y="16" text-anchor="end" font-family="monospace" font-size="8.5" fill="#64748B">BRIDGE_DECK // ALPHA</text>
+
+    <!-- 1. Hologram Pilot Avatar (Left) -->
+    <g transform="translate(18, 38)">
+      <rect width="80" height="90" rx="6" fill="#04091a" stroke="#00F0FF" stroke-width="1" stroke-dasharray="28 4" />
+      <!-- Pilot Helmet / Visor Silhouette -->
+      <circle cx="40" cy="38" r="22" fill="#0a1945" stroke="#38BDF8" stroke-width="1.2" />
+      <path d="M 25 36 Q 40 28 55 36 Q 52 50 40 50 Q 28 50 25 36 Z" fill="#00F0FF" fill-opacity="0.85" filter="url(#glow-cyan)" />
+      <path d="M 18 80 C 18 60 62 60 62 80 Z" fill="#0f2666" stroke="#38BDF8" stroke-width="1" />
+      <!-- Hologram HUD Tag -->
+      <rect x="8" y="74" width="64" height="12" rx="2" fill="#030816" stroke="#00F0FF" stroke-width="0.6" />
+      <text x="40" y="83" text-anchor="middle" font-family="monospace" font-size="7.5" font-weight="700" fill="#00F0FF" letter-spacing="1">ID: ZEUS</text>
+    </g>
+
+    <!-- 2. Officer Details & Credentials (Center-Left) -->
+    <g transform="translate(112, 38)">
+      <!-- Name & Callsign (Single Canonical Display) -->
+      <text x="0" y="24" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="900" fill="#FFFFFF" letter-spacing="1">
+        LA THAI HOA <tspan fill="#00F0FF" font-size="18" font-weight="700" letter-spacing="1.5">(ZEUS)</tspan>
+      </text>
+
+      <!-- Professional Subtitle -->
+      <text x="0" y="44" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#38BDF8" letter-spacing="0.5">
+        AI SYSTEMS ARCHITECT &amp; MULTIMODAL RESEARCHER
+      </text>
+      <text x="0" y="58" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="500" fill="#94A3B8">
+        Advancing Foundation Architectures, Vision-Language Models &amp; Low-Latency Telemetry
+      </text>
+
+      <!-- Accreditation & Credential Pills -->
+      <g transform="translate(0, 70)">
+        <!-- CTU Base -->
+        <rect x="0" y="0" width="180" height="18" rx="3" fill="#071330" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.6" />
+        <text x="90" y="12.5" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8.5" font-weight="700" fill="#E2E8F0">CTU Computer Science • GPA 3.37</text>
+
+        <!-- RLHF Focus -->
+        <rect x="188" y="0" width="135" height="18" rx="3" fill="#071330" stroke="#38BDF8" stroke-width="0.6" stroke-opacity="0.6" />
+        <text x="255" y="12.5" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8.5" font-weight="700" fill="#38BDF8">RLHF &amp; Model Alignment</text>
+
+        <!-- Google Cert -->
+        <rect x="331" y="0" width="155" height="18" rx="3" fill="#071330" stroke="#818CF8" stroke-width="0.6" stroke-opacity="0.6" />
+        <text x="408" y="12.5" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8.5" font-weight="700" fill="#818CF8">Google Cyber &amp; UX Certified</text>
+      </g>
+
+      <!-- Mission Ready Status -->
+      <g transform="translate(0, 96)">
+        <circle cx="5" cy="5" r="3.5" fill="#10B981" class="beacon-light" />
+        <text x="14" y="8" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#10B981" letter-spacing="1">STATUS: MISSION READY // DEPLOYMENT: HIREABLE [OPEN FOR ROLES]</text>
+      </g>
+    </g>
+
+    <!-- 3. Flagship Interceptor in Hyperspace (Right) -->
+    <g transform="translate(620, 28)" class="starship-float">
+      <!-- Target Vector Brackets -->
+      <path d="M 20 20 L 10 20 L 10 30" stroke="#00F0FF" stroke-width="1" fill="none" opacity="0.6" />
+      <path d="M 210 20 L 220 20 L 220 30" stroke="#00F0FF" stroke-width="1" fill="none" opacity="0.6" />
+      <path d="M 20 80 L 10 80 L 10 70" stroke="#00F0FF" stroke-width="1" fill="none" opacity="0.6" />
+      <path d="M 210 80 L 220 80 L 220 70" stroke="#00F0FF" stroke-width="1" fill="none" opacity="0.6" />
+
+      <!-- Ship Callout -->
+      <text x="115" y="16" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8" font-weight="700" fill="#00F0FF" letter-spacing="1.5">FLAGSHIP // ZEUS-01</text>
+      <text x="115" y="94" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="7.5" fill="#64748B">VECTOR: WARP 4.2 • BEARING 042°</text>
+
+      <!-- Twin Ion Exhaust Plumes -->
+      <ellipse cx="40" cy="46" rx="26" ry="3.5" fill="url(#thruster-glow)" filter="url(#glow-cyan)" class="ion-plume" />
+      <ellipse cx="40" cy="54" rx="26" ry="3.5" fill="url(#thruster-glow)" filter="url(#glow-cyan)" class="ion-plume" />
+
+      <!-- Interceptor Spacecraft Body -->
+      <g transform="translate(48, 26)">
+        <!-- Wing Shadow & Base Hull -->
+        <polygon points="120,24 0,0 35,19 0,48" fill="#071536" stroke="#1e3a8a" stroke-width="1" />
+        <!-- Main Wings Top Layer -->
+        <polygon points="120,24 15,6 40,24 15,42" fill="#0f2b66" stroke="#38bdf8" stroke-width="1.2" />
+        <!-- Needle Fuselage -->
+        <polygon points="135,24 35,17 48,24 35,31" fill="#1e40af" stroke="#00f0ff" stroke-width="1.2" />
+        <!-- Cockpit Glass Canopy -->
+        <polygon points="105,24 60,20 68,24 60,28" fill="#00f0ff" opacity="0.9" filter="url(#glow-cyan)" />
+        <!-- Wingtip Plasma Guns -->
+        <line x1="5" y1="4" x2="35" y2="4" stroke="#00f0ff" stroke-width="1" filter="url(#glow-cyan)" />
+        <line x1="5" y1="44" x2="35" y2="44" stroke="#00f0ff" stroke-width="1" filter="url(#glow-cyan)" />
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== CYBERNETIC CONDUIT BUS DIVIDER ==================== -->
+  <g transform="translate(25, 202)">
+    <!-- Circuit Conduit Lines -->
+    <line x1="20" y1="8" x2="850" y2="8" stroke="#1e293b" stroke-width="1" />
+    <line x1="20" y1="8" x2="850" y2="8" stroke="#00F0FF" stroke-width="1" opacity="0.4" class="conduit-line" />
+    
+    <!-- Central Data Bus Tag -->
+    <rect x="335" y="0" width="200" height="16" rx="3" fill="#04091a" stroke="#00F0FF" stroke-width="0.8" />
+    <circle cx="345" cy="8" r="2.5" fill="#00F0FF" class="beacon-light" />
+    <text x="440" y="11.5" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8" font-weight="700" fill="#00F0FF" letter-spacing="1">MULTI-FUNCTION AVIONICS CLUSTER</text>
+  </g>
+
+  <!-- ==================== LOWER DECK: 3 CONNECTED MFD CONSOLES ==================== -->
+
+  <!-- SCREEN 1: MISSION CORE & FRONTIERS (Left) -->
+  <g transform="translate(25, 226)">
+    <rect width="280" height="268" rx="8" fill="url(#screen-glass)" stroke="#334155" stroke-width="1.2" />
+    <!-- Header -->
+    <path d="M 0 8 Q 0 0 8 0 L 272 0 Q 280 0 280 8 L 280 26 L 0 26 Z" fill="#091430" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.3" />
+    <rect x="12" y="9" width="7" height="7" rx="1.5" fill="#00F0FF" class="beacon-light" />
+    <text x="24" y="16" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#00F0FF" letter-spacing="1.2">MFD_01 // CORE FRONTIERS</text>
+    <text x="268" y="16" text-anchor="end" font-family="monospace" font-size="8.5" fill="#64748B">DOMAIN_SPEC</text>
+
+    <!-- Capability 1: Multimodal AI -->
+    <g transform="translate(14, 36)">
+      <rect width="252" height="60" rx="5" fill="#060e24" stroke="#1e293b" stroke-width="1" />
+      <rect x="8" y="10" width="3" height="40" rx="1.5" fill="#00F0FF" />
+      <text x="18" y="22" font-family="'Space Grotesk', monospace" font-size="9.5" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">MULTIMODAL AI &amp; VLMs</text>
+      <text x="18" y="37" font-family="'Space Grotesk', sans-serif" font-size="8.5" fill="#94A3B8">Vision-Language Models &amp; Action Step Seg</text>
+      <text x="18" y="50" font-family="'Space Grotesk', monospace" font-size="8" fill="#38BDF8">Foundation Archs • Autonomous Agents</text>
+    </g>
+
+    <!-- Capability 2: Alignment & Post-Training -->
+    <g transform="translate(14, 104)">
+      <rect width="252" height="60" rx="5" fill="#060e24" stroke="#1e293b" stroke-width="1" />
+      <rect x="8" y="10" width="3" height="40" rx="1.5" fill="#38BDF8" />
+      <text x="18" y="22" font-family="'Space Grotesk', monospace" font-size="9.5" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">AI SAFETY &amp; RLHF</text>
+      <text x="18" y="37" font-family="'Space Grotesk', sans-serif" font-size="8.5" fill="#94A3B8">LLM Alignment &amp; Fine-Tuning Protocols</text>
+      <text x="18" y="50" font-family="'Space Grotesk', monospace" font-size="8" fill="#10B981">Model Evaluation • Adversarial Red-Teaming</text>
+    </g>
+
+    <!-- Capability 3: Low-Latency Systems -->
+    <g transform="translate(14, 172)">
+      <rect width="252" height="60" rx="5" fill="#060e24" stroke="#1e293b" stroke-width="1" />
+      <rect x="8" y="10" width="3" height="40" rx="1.5" fill="#818CF8" />
+      <text x="18" y="22" font-family="'Space Grotesk', monospace" font-size="9.5" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">SCALABLE EDGE SYSTEMS</text>
+      <text x="18" y="37" font-family="'Space Grotesk', sans-serif" font-size="8.5" fill="#94A3B8">Low-Latency Win32 Kernel APIs (&lt;0.5% CPU)</text>
+      <text x="18" y="50" font-family="'Space Grotesk', monospace" font-size="8" fill="#818CF8">High-Perf Python • React 18 • NVML Direct</text>
+    </g>
+
+    <!-- Footer Tag -->
+    <text x="140" y="254" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8" font-weight="700" fill="#64748B" letter-spacing="1">ENGINES: PYTORCH • CUDA • REACT • TAURI</text>
+  </g>
+
+  <!-- SCREEN 2: 360° ORBITAL NAVIGATION RADAR (Center) -->
+  <g transform="translate(318, 226)">
+    <rect width="284" height="268" rx="8" fill="url(#screen-glass)" stroke="#334155" stroke-width="1.2" />
+    <!-- Header -->
+    <path d="M 0 8 Q 0 0 8 0 L 276 0 Q 284 0 284 8 L 284 26 L 0 26 Z" fill="#091430" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.3" />
+    <rect x="12" y="9" width="7" height="7" rx="1.5" fill="#10B981" class="beacon-light" />
+    <text x="24" y="16" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#10B981" letter-spacing="1.2">MFD_02 // 360° ORBITAL RADAR</text>
+    <text x="272" y="16" text-anchor="end" font-family="monospace" font-size="8.5" fill="#64748B">NAV_SCAN</text>
+
+    <!-- Radar Grid & Sweep System (Center at 142, 130) -->
+    <g transform="translate(142, 126)">
+      <!-- Range Circles -->
+      <circle cx="0" cy="0" r="88" fill="none" stroke="#1e293b" stroke-width="1" />
+      <circle cx="0" cy="0" r="66" fill="none" stroke="#00F0FF" stroke-width="0.7" stroke-opacity="0.25" stroke-dasharray="6 4" />
+      <circle cx="0" cy="0" r="44" fill="none" stroke="#00F0FF" stroke-width="0.8" stroke-opacity="0.35" />
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.4" stroke-dasharray="2 3" />
+
+      <!-- Coordinate Crosshairs -->
+      <line x1="-94" y1="0" x2="94" y2="0" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.3" stroke-dasharray="4 4" />
+      <line x1="0" y1="-94" x2="0" y2="94" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.3" stroke-dasharray="4 4" />
+
+      <!-- Degree Angle Markers -->
+      <text x="0" y="-91" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#64748B">000°</text>
+      <text x="92" y="3" text-anchor="start" font-family="monospace" font-size="7.5" fill="#64748B">090°</text>
+      <text x="0" y="99" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#64748B">180°</text>
+      <text x="-92" y="3" text-anchor="end" font-family="monospace" font-size="7.5" fill="#64748B">270°</text>
+
+      <!-- Constellation Hyperlanes (Navigation Routes) -->
+      <line x1="-40" y1="-25" x2="30" y2="-45" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.4" stroke-dasharray="3 3" />
+      <line x1="30" y1="-45" x2="55" y2="15" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.4" stroke-dasharray="3 3" />
+      <line x1="55" y1="15" x2="0" y2="38" stroke="#00F0FF" stroke-width="1" stroke-opacity="0.6" />
+      <line x1="0" y1="38" x2="-50" y2="20" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.4" stroke-dasharray="3 3" />
+
+      <!-- Star Nodes -->
+      <circle cx="-40" cy="-25" r="2" fill="#FFFFFF" />
+      <circle cx="30" cy="-45" r="2.5" fill="#38BDF8" filter="url(#glow-cyan)" />
+      <circle cx="55" cy="15" r="2" fill="#818CF8" />
+      <circle cx="-50" cy="20" r="2" fill="#FFFFFF" />
+
+      <!-- Sweeping 360° Laser Radar Beam -->
+      <line x1="0" y1="0" x2="72" y2="-54" stroke="#00F0FF" stroke-width="1.5" stroke-opacity="0.85" filter="url(#glow-cyan)" class="radar-sweep-beam" />
+
+      <!-- Canonical Target: Can Tho Base Beacon -->
+      <g transform="translate(0, 38)">
+        <circle cx="0" cy="0" r="14" fill="none" stroke="#00F0FF" stroke-width="1" class="beacon-ring" />
+        <circle cx="0" cy="0" r="5" fill="#00F0FF" filter="url(#glow-pulse)" />
+        <circle cx="0" cy="0" r="2" fill="#FFFFFF" />
+      </g>
+    </g>
+
+    <!-- Radar Clean Footer (No Colliding Text) -->
+    <g transform="translate(14, 234)">
+      <rect width="256" height="24" rx="4" fill="#060e24" stroke="#1e293b" stroke-width="1" />
+      <circle cx="12" cy="12" r="2.5" fill="#00F0FF" />
+      <text x="22" y="15" font-family="'Space Grotesk', monospace" font-size="8.5" font-weight="700" fill="#00F0FF">TARGET: CAN THO BASE</text>
+      <text x="246" y="15" text-anchor="end" font-family="'Space Grotesk', monospace" font-size="8.5" fill="#38BDF8">SECTOR: ASIA-PACIFIC</text>
+    </g>
+  </g>
+
+  <!-- SCREEN 3: QUANTUM COMMS & AVIONICS TELEMETRY (Right) -->
+  <g transform="translate(615, 226)">
+    <rect width="280" height="268" rx="8" fill="url(#screen-glass)" stroke="#334155" stroke-width="1.2" />
+    <!-- Header -->
+    <path d="M 0 8 Q 0 0 8 0 L 272 0 Q 280 0 280 8 L 280 26 L 0 26 Z" fill="#091430" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.3" />
+    <rect x="12" y="9" width="7" height="7" rx="1.5" fill="#818CF8" class="beacon-light" />
+    <text x="24" y="16" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#818CF8" letter-spacing="1.2">MFD_03 // COMMS &amp; TELEMETRY</text>
+    <text x="268" y="16" text-anchor="end" font-family="monospace" font-size="8.5" fill="#64748B">DIAG_DATA</text>
+
+    <!-- Comms Channel 1: Email Dispatch -->
+    <g transform="translate(14, 36)">
+      <rect width="252" height="42" rx="5" fill="#060f26" stroke="#334155" stroke-width="1" />
+      <circle cx="20" cy="21" r="10" fill="#0e1f4d" stroke="#38BDF8" stroke-width="0.8" />
+      <!-- Small Mail Icon -->
+      <path d="M 14 17 L 20 21 L 26 17 M 14 17 L 14 25 L 26 25 L 26 17 Z" stroke="#00F0FF" stroke-width="0.8" fill="none" />
+      <text x="36" y="16" font-family="'Space Grotesk', monospace" font-size="8" font-weight="700" fill="#64748B" letter-spacing="1">QUANTUM DISPATCH (PRIMARY):</text>
+      <text x="36" y="30" font-family="'Space Grotesk', monospace" font-size="9.5" font-weight="700" fill="#00F0FF">lathaihoa2003@gmail.com</text>
+    </g>
+
+    <!-- Comms Channel 2: Voice Audio Link -->
+    <g transform="translate(14, 86)">
+      <rect width="252" height="42" rx="5" fill="#060f26" stroke="#334155" stroke-width="1" />
+      <circle cx="20" cy="21" r="10" fill="#0e1f4d" stroke="#38BDF8" stroke-width="0.8" />
+      <!-- Signal Tower Icon -->
+      <path d="M 20 15 L 20 27 M 16 19 Q 20 16 24 19 M 14 22 Q 20 18 26 22" stroke="#38BDF8" stroke-width="0.8" fill="none" />
+      <text x="36" y="16" font-family="'Space Grotesk', monospace" font-size="8" font-weight="700" fill="#64748B" letter-spacing="1">SUBSPACE VOICE LINK:</text>
+      <text x="36" y="30" font-family="'Space Grotesk', monospace" font-size="10" font-weight="700" fill="#38BDF8">(+84) 0865 254 028</text>
+    </g>
+
+    <!-- Telemetry Diagnostic Meters -->
+    <g transform="translate(14, 138)">
+      <text x="0" y="8" font-family="'Space Grotesk', monospace" font-size="8" font-weight="700" fill="#94A3B8" letter-spacing="1">ENGINE TELEMETRY DIAGNOSTICS:</text>
+
+      <!-- Meter 1: Neural Core Engine -->
+      <text x="0" y="24" font-family="'Space Grotesk', monospace" font-size="8" fill="#64748B">NEURAL CORE ENGINE</text>
+      <text x="252" y="24" text-anchor="end" font-family="monospace" font-size="8" fill="#00F0FF">98.4%</text>
+      <rect x="0" y="28" width="252" height="5" rx="2.5" fill="#0f172a" />
+      <rect x="0" y="28" width="248" height="5" rx="2.5" fill="#00F0FF" filter="url(#glow-cyan)" />
+
+      <!-- Meter 2: RLHF Integrity -->
+      <text x="0" y="47" font-family="'Space Grotesk', monospace" font-size="8" fill="#64748B">RLHF ALIGNMENT INTEGRITY</text>
+      <text x="252" y="47" text-anchor="end" font-family="monospace" font-size="8" fill="#10B981">100%</text>
+      <rect x="0" y="51" width="252" height="5" rx="2.5" fill="#0f172a" />
+      <rect x="0" y="51" width="252" height="5" rx="2.5" fill="#10B981" />
+
+      <!-- Meter 3: Win32 Kernel Overhead -->
+      <text x="0" y="70" font-family="'Space Grotesk', monospace" font-size="8" fill="#64748B">C-API WIN32 OVERHEAD</text>
+      <text x="252" y="70" text-anchor="end" font-family="monospace" font-size="8" fill="#38BDF8">&lt; 0.5% CPU</text>
+      <rect x="0" y="74" width="252" height="5" rx="2.5" fill="#0f172a" />
+      <rect x="0" y="74" width="18" height="5" rx="2.5" fill="#38BDF8" />
+
+      <!-- Accreditation Footer Pill -->
+      <rect x="0" y="92" width="252" height="22" rx="4" fill="#070e24" stroke="#1e293b" stroke-width="0.8" />
+      <text x="126" y="106" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8" font-weight="700" fill="#818CF8" letter-spacing="0.8">GOOGLE CYBERSECURITY • UX CERTIFIED</text>
+    </g>
+  </g>
+</svg>
