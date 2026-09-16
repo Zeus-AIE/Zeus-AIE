@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 <!-- ==================== ANIMATED COSMIC HUD COMMAND CONSOLE ==================== -->
 <img src="assets/cosmic_hud_header.svg" width="100%" alt="Zeus Cosmic Command Console" />
@@ -116,6 +116,10 @@ Deployment Status : Ready for Mission Briefing [Hireable: True]
 ### 📊 Orbital Telemetry & Real-Time Metrics
 
 <div align="center">
+
+<img src="https://raw.githubusercontent.com/Zeus-AIE/Zeus-AIE/output/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Grid Snake" width="100%" />
+
+<br/><br/>
 
 <a href="https://github.com/Zeus-AIE">
   <img src="https://github-stats-extended.vercel.app/api?username=Zeus-AIE&show_icons=true&bg_color=050814&title_color=00F0FF&icon_color=38BDF8&text_color=E2E8F0&hide_border=true" alt="Zeus-AIE's GitHub Stats" width="48%" />
