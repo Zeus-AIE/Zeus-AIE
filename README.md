@@ -59,11 +59,11 @@ A results-driven **AI Engineer & Systems Developer** and Computer Science gradua
 
 <div align="center">
   <a href="https://github.com/Zeus-AIE/OmniDeck">
-    <img src="https://github-stats-extended.vercel.app/api/pin/?username=Zeus-AIE&repo=OmniDeck&bg_color=050814&title_color=00F0FF&icon_color=38BDF8&text_color=E2E8F0&hide_border=true" alt="OmniDeck Repository Card" width="48%" />
+    <img src="https://github-stats-extended.vercel.app/api/pin/?username=Zeus-AIE&repo=OmniDeck&bg_color=050814&title_color=00F0FF&icon_color=38BDF8&text_color=E2E8F0&hide_border=true&cache_seconds=1800" alt="OmniDeck Repository Card" width="48%" />
   </a>
   &nbsp;
   <a href="https://github.com/Zeus-AIE/HoK-Translator">
-    <img src="https://github-stats-extended.vercel.app/api/pin/?username=Zeus-AIE&repo=HoK-Translator&bg_color=050814&title_color=00F0FF&icon_color=38BDF8&text_color=E2E8F0&hide_border=true" alt="HoK-Translator Repository Card" width="48%" />
+    <img src="https://github-stats-extended.vercel.app/api/pin/?username=Zeus-AIE&repo=HoK-Translator&bg_color=050814&title_color=00F0FF&icon_color=38BDF8&text_color=E2E8F0&hide_border=true&cache_seconds=1800" alt="HoK-Translator Repository Card" width="48%" />
   </a>
 </div>
 
