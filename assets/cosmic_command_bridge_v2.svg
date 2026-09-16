@@ -1,0 +1,454 @@
+<svg width="100%" height="525" viewBox="0 0 920 525" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Deep Space Background Gradients -->
+    <linearGradient id="bridge-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030713" />
+      <stop offset="50%" stop-color="#070d22" />
+      <stop offset="100%" stop-color="#02050c" />
+    </linearGradient>
+
+    <linearGradient id="viewport-glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e1b3d" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#050c1f" stop-opacity="0.92" />
+    </linearGradient>
+
+    <linearGradient id="screen-glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b1736" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#040919" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="ring-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="50%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+
+    <linearGradient id="plasma-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0" />
+      <stop offset="40%" stop-color="#00F0FF" stop-opacity="0.8" />
+      <stop offset="80%" stop-color="#38BDF8" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+
+    <!-- Neon Glow Filters -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-blue" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-pulse" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Fine Avionics Grid Pattern -->
+    <pattern id="bridge-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00F0FF" stroke-width="0.5" stroke-opacity="0.04" />
+      <circle cx="0" cy="0" r="0.6" fill="#00F0FF" fill-opacity="0.12" />
+    </pattern>
+
+    <!-- Clip Path for User Avatar -->
+    <clipPath id="avatar-clip">
+      <rect x="0" y="0" width="80" height="80" rx="8" />
+    </clipPath>
+
+    <!-- Animations -->
+    <style>
+      @keyframes laserScan {
+        0% { transform: translateY(0); opacity: 0; }
+        15% { opacity: 0.45; }
+        85% { opacity: 0.45; }
+        100% { transform: translateY(495px); opacity: 0; }
+      }
+      @keyframes rotateClockwise {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes rotateCounter {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
+      }
+      @keyframes radarSweep {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes starshipCruising {
+        0%, 100% { transform: translate(585px, 42px) rotate(0deg); }
+        50% { transform: translate(588px, 36px) rotate(-1.5deg); }
+      }
+      @keyframes thrusterPlasma {
+        0%, 100% { transform: scaleX(0.85); opacity: 0.75; }
+        50% { transform: scaleX(1.3); opacity: 1; }
+      }
+      @keyframes beaconBlink {
+        0%, 100% { opacity: 0.25; }
+        50% { opacity: 1; }
+      }
+      @keyframes beaconWave {
+        0% { transform: scale(0.8); opacity: 0.9; }
+        100% { transform: scale(2.2); opacity: 0; }
+      }
+      @keyframes conduitFlow {
+        0% { stroke-dashoffset: 60; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      .hud-scanline { animation: laserScan 6s ease-in-out infinite; }
+      .orbit-1 { transform-origin: 760px 115px; animation: rotateClockwise 20s linear infinite; }
+      .orbit-2 { transform-origin: 760px 115px; animation: rotateCounter 30s linear infinite; }
+      .orbit-3 { transform-origin: 760px 115px; animation: rotateClockwise 10s linear infinite; }
+      .radar-line { transform-origin: 760px 115px; animation: radarSweep 6s linear infinite; }
+      .starship-interceptor { animation: starshipCruising 5s ease-in-out infinite; }
+      .thruster-jet { transform-origin: -8px 18px; animation: thrusterPlasma 0.4s ease-in-out infinite alternate; }
+      .beacon-light { animation: beaconBlink 1.4s ease-in-out infinite; }
+      .beacon-ring { transform-origin: 460px 380px; animation: beaconWave 2s ease-out infinite; }
+      .conduit-line { stroke-dasharray: 6 4; animation: conduitFlow 2s linear infinite; }
+    </style>
+  </defs>
+
+  <!-- ==================== MAIN CHASSIS & COCKPIT SHELL ==================== -->
+  <rect width="920" height="525" rx="14" fill="url(#bridge-bg)" stroke="#1e293b" stroke-width="1.5" />
+  <rect width="920" height="525" rx="14" fill="url(#bridge-grid)" />
+
+  <!-- Corner Brackets (HUD Tech Accents) -->
+  <path d="M 20 40 L 20 20 L 40 20" stroke="#00F0FF" stroke-width="2.5" fill="none" opacity="0.8" />
+  <path d="M 900 40 L 900 20 L 880 20" stroke="#00F0FF" stroke-width="2.5" fill="none" opacity="0.8" />
+  <path d="M 20 485 L 20 505 L 40 505" stroke="#00F0FF" stroke-width="2.5" fill="none" opacity="0.8" />
+  <path d="M 900 485 L 900 505 L 880 505" stroke="#00F0FF" stroke-width="2.5" fill="none" opacity="0.8" />
+
+  <!-- Scanning Laser Line -->
+  <line x1="10" y1="15" x2="910" y2="15" stroke="#00F0FF" stroke-width="1" opacity="0.4" filter="url(#glow-cyan)" class="hud-scanline" />
+
+  <!-- ==================== TOP STATUS RIBBON ==================== -->
+  <g transform="translate(25, 18)">
+    <rect x="0" y="0" width="870" height="24" rx="4" fill="#060c20" stroke="#1e293b" stroke-width="0.8" />
+    <!-- Left Indicator -->
+    <circle cx="14" cy="12" r="3.5" fill="#00F0FF" class="beacon-light" />
+    <text x="24" y="15" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#00F0FF" letter-spacing="1.2">TACTICAL SYS: ONLINE</text>
+    <text x="175" y="15" font-family="'Space Grotesk', monospace" font-size="8.5" fill="#64748B">//</text>
+    <text x="190" y="15" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#38BDF8" letter-spacing="1">DEFENSE LEVEL: 1</text>
+
+    <!-- Center Badge -->
+    <text x="435" y="15" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="9.5" font-weight="800" fill="#E2E8F0" letter-spacing="2">STARSHIP COMMAND BRIDGE // ZEUS-01</text>
+
+    <!-- Right Base Coordinates -->
+    <rect x="665" y="3" width="200" height="18" rx="3" fill="#0a1533" stroke="#00F0FF" stroke-width="0.5" stroke-opacity="0.4" />
+    <circle cx="674" cy="12" r="2.5" fill="#10B981" />
+    <text x="682" y="15" font-family="'Space Grotesk', monospace" font-size="8.5" font-weight="700" fill="#38BDF8" letter-spacing="0.8">BASE: CAN THO [10.05°N, 105.75°E]</text>
+  </g>
+
+  <!-- ==================== UPPER FLIGHT DECK: PILOT & CELESTIAL RADAR ==================== -->
+  <g transform="translate(25, 50)">
+    <!-- Viewport Panel Container -->
+    <rect width="870" height="168" rx="10" fill="url(#viewport-glass)" stroke="#334155" stroke-width="1" />
+    <path d="M 0 10 Q 0 0 10 0 L 860 0 Q 870 0 870 10 L 870 26 L 0 26 Z" fill="#081430" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.3" />
+    
+    <!-- Header Bar Info -->
+    <rect x="14" y="9" width="8" height="8" rx="2" fill="#00F0FF" class="beacon-light" />
+    <text x="28" y="16" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#00F0FF" letter-spacing="1.5">PILOT IN COMMAND // PRIMARY FLIGHT VIEWPORT</text>
+    <text x="856" y="16" text-anchor="end" font-family="monospace" font-size="8.5" fill="#64748B">BRIDGE_DECK // ALPHA</text>
+
+    <!-- 1. Real Avatar Photo in Hologram HUD Frame (Left) -->
+    <g transform="translate(18, 38)">
+      <!-- Outer HUD Tech Border -->
+      <rect x="-3" y="-3" width="86" height="86" rx="10" fill="none" stroke="#00F0FF" stroke-width="1.2" filter="url(#glow-cyan)" />
+      <!-- Corner Accents -->
+      <path d="M -6 6 L -6 -6 L 6 -6" stroke="#38BDF8" stroke-width="1.8" fill="none" />
+      <path d="M 86 -6 L 92 -6 L 92 6" stroke="#38BDF8" stroke-width="1.8" fill="none" />
+      <path d="M -6 80 L -6 92 L 6 92" stroke="#38BDF8" stroke-width="1.8" fill="none" />
+      <path d="M 86 92 L 92 92 L 92 80" stroke="#38BDF8" stroke-width="1.8" fill="none" />
+
+      <!-- Embedded Real Photo (Base64 JPEG) -->
+      <image x="0" y="0" width="80" height="80" href="data:image/jpeg;base64,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" xlink:href="data:image/jpeg;base64,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" clip-path="url(#avatar-clip)" preserveAspectRatio="xMidYMid slice" />
+
+      <!-- Holographic Overlay Scanlines -->
+      <rect x="0" y="0" width="80" height="80" rx="8" fill="#00F0FF" fill-opacity="0.08" />
+      
+      <!-- Hologram HUD Tag Under Avatar -->
+      <rect x="0" y="88" width="80" height="15" rx="3" fill="#040c20" stroke="#00F0FF" stroke-width="0.8" />
+      <text x="40" y="99" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8" font-weight="700" fill="#00F0FF" letter-spacing="1">ID: ZEUS</text>
+    </g>
+
+    <!-- 2. Officer Details & Credentials (Center-Left) -->
+    <g transform="translate(120, 36)">
+      <!-- Name & Callsign -->
+      <text x="0" y="24" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="900" fill="#FFFFFF" letter-spacing="1">
+        LA THAI HOA <tspan fill="#00F0FF" font-size="18" font-weight="700" letter-spacing="1.5">(ZEUS)</tspan>
+      </text>
+
+      <!-- Professional Subtitle -->
+      <text x="0" y="44" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#38BDF8" letter-spacing="0.5">
+        AI SYSTEMS ARCHITECT &amp; MULTIMODAL RESEARCHER
+      </text>
+      <text x="0" y="58" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="500" fill="#94A3B8">
+        Advancing Foundation Architectures, Vision-Language Models &amp; Low-Latency Telemetry
+      </text>
+
+      <!-- Accreditation & Credential Pills -->
+      <g transform="translate(0, 72)">
+        <!-- CTU Base -->
+        <rect x="0" y="0" width="175" height="18" rx="3" fill="#071330" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.6" />
+        <text x="87" y="12.5" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8.5" font-weight="700" fill="#E2E8F0">CTU Computer Science • GPA 3.37</text>
+
+        <!-- RLHF Focus -->
+        <rect x="183" y="0" width="135" height="18" rx="3" fill="#071330" stroke="#38BDF8" stroke-width="0.6" stroke-opacity="0.6" />
+        <text x="250" y="12.5" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8.5" font-weight="700" fill="#38BDF8">RLHF &amp; Model Alignment</text>
+
+        <!-- Google Cert -->
+        <rect x="326" y="0" width="150" height="18" rx="3" fill="#071330" stroke="#818CF8" stroke-width="0.6" stroke-opacity="0.6" />
+        <text x="401" y="12.5" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8.5" font-weight="700" fill="#818CF8">Google Cyber &amp; UX Certified</text>
+      </g>
+
+      <!-- Mission Ready Status -->
+      <g transform="translate(0, 98)">
+        <circle cx="5" cy="5" r="3.5" fill="#10B981" class="beacon-light" />
+        <text x="14" y="8" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#10B981" letter-spacing="1">STATUS: MISSION READY // DEPLOYMENT: HIREABLE [OPEN FOR ROLES]</text>
+      </g>
+    </g>
+
+    <!-- 3. Planetary Satellite Radar with Dual Orbit Rings (Right Side) -->
+    <g transform="translate(0, 0)">
+      <!-- Planetary Core with Atmospheric Glow -->
+      <circle cx="760" cy="100" r="32" fill="#050d26" stroke="#00F0FF" stroke-width="1.8" filter="url(#glow-blue)" />
+      <circle cx="760" cy="100" r="23" fill="#0a1845" />
+      <circle cx="752" cy="92" r="11" fill="#00F0FF" fill-opacity="0.2" />
+
+      <!-- Orbital Rings (Rotating dynamically in reverse directions) -->
+      <!-- Orbit 1: Wide Planetary Ellipse -->
+      <ellipse cx="760" cy="100" rx="86" ry="36" fill="none" stroke="url(#ring-grad)" stroke-width="1.6" stroke-dasharray="10 5 3 5" class="orbit-1" filter="url(#glow-cyan)" />
+      
+      <!-- Orbit 2: Outer Circular Radar with Distance Markers -->
+      <circle cx="760" cy="100" r="92" fill="none" stroke="#1e293b" stroke-width="1" />
+      <circle cx="760" cy="100" r="92" fill="none" stroke="#00F0FF" stroke-width="1.4" stroke-dasharray="25 75 15 35" stroke-opacity="0.6" class="orbit-2" />
+
+      <!-- Orbit 3: Inner Orbital Node with Drone Satellite -->
+      <g class="orbit-3">
+        <circle cx="760" cy="52" r="3.5" fill="#00F0FF" filter="url(#glow-cyan)" />
+        <line x1="760" y1="52" x2="760" y2="100" stroke="#00F0FF" stroke-width="0.5" stroke-opacity="0.4" stroke-dasharray="2 2" />
+      </g>
+
+      <!-- Radar Crosshairs -->
+      <line x1="660" y1="100" x2="860" y2="100" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.25" stroke-dasharray="4 4" />
+      <line x1="760" y1="15" x2="760" y2="155" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.25" stroke-dasharray="4 4" />
+
+      <!-- Sweeping Radar Sector Line -->
+      <line x1="760" y1="100" x2="845" y2="35" stroke="#00F0FF" stroke-width="1.5" stroke-opacity="0.8" class="radar-line" filter="url(#glow-cyan)" />
+
+      <!-- Reticle Telemetry Label -->
+      <text x="760" y="158" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8" fill="#00F0FF" letter-spacing="1.5" opacity="0.85">ORBIT_RADAR // 360° TELEMETRY</text>
+    </g>
+
+    <!-- 4. Cruising Starship Interceptor ZEUS-01 (Firmly Anchored on Right Side) -->
+    <g class="starship-interceptor">
+      <!-- Target Reticle / HUD Lock -->
+      <circle cx="20" cy="18" r="30" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.25" stroke-dasharray="3 4" />
+      <path d="M -8 6 L -4 6 M -8 6 L -8 10" stroke="#00F0FF" stroke-width="1" opacity="0.6" />
+      <path d="M 48 6 L 44 6 M 48 6 L 48 10" stroke="#00F0FF" stroke-width="1" opacity="0.6" />
+      <path d="M -8 30 L -4 30 M -8 30 L -8 26" stroke="#00F0FF" stroke-width="1" opacity="0.6" />
+      <path d="M 48 30 L 44 30 M 48 30 L 48 26" stroke="#00F0FF" stroke-width="1" opacity="0.6" />
+
+      <!-- Ion Plasma Exhaust Trail -->
+      <g class="thruster-jet">
+        <!-- Main Center Jet Plume -->
+        <polygon points="-8,16 -36,18 -8,20" fill="url(#plasma-grad)" filter="url(#glow-cyan)" />
+        <line x1="-8" y1="18" x2="-42" y2="18" stroke="#ffffff" stroke-width="1.2" opacity="0.9" />
+        <!-- Engine Jet Plumes -->
+        <polygon points="-6,11 -22,12 -6,13" fill="url(#plasma-grad)" opacity="0.8" />
+        <polygon points="-6,23 -22,24 -6,25" fill="url(#plasma-grad)" opacity="0.8" />
+      </g>
+
+      <!-- Interceptor Spacecraft Aerodynamic Hull -->
+      <polygon points="-8,5 24,18 -8,31 -4,22 -2,18 -4,14" fill="#0c1630" stroke="#00F0FF" stroke-width="1" />
+      <polygon points="-5,7 12,15 -1,16" fill="#1e293b" stroke="#38BDF8" stroke-width="0.6" />
+      <polygon points="-5,29 12,21 -1,20" fill="#1e293b" stroke="#38BDF8" stroke-width="0.6" />
+      <polygon points="-10,14 44,18 -10,22 -6,18" fill="#050a17" stroke="#38BDF8" stroke-width="1.2" />
+      <line x1="-4" y1="18" x2="40" y2="18" stroke="#00F0FF" stroke-width="1" filter="url(#glow-cyan)" />
+      <polygon points="10,17 26,18 10,19 6,18" fill="#00F0FF" filter="url(#glow-cyan)" />
+      <polygon points="13,17.5 22,18 13,18.5" fill="#ffffff" opacity="0.95" />
+
+      <!-- Ship Callout -->
+      <text x="20" y="-8" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8" font-weight="700" fill="#00F0FF" letter-spacing="1.5">FLAGSHIP // ZEUS-01</text>
+    </g>
+  </g>
+
+  <!-- ==================== CYBERNETIC CONDUIT BUS DIVIDER ==================== -->
+  <g transform="translate(25, 226)">
+    <!-- Circuit Conduit Lines -->
+    <line x1="20" y1="8" x2="850" y2="8" stroke="#1e293b" stroke-width="1" />
+    <line x1="20" y1="8" x2="850" y2="8" stroke="#00F0FF" stroke-width="1" opacity="0.4" class="conduit-line" />
+    
+    <!-- Central Data Bus Tag -->
+    <rect x="335" y="0" width="200" height="16" rx="3" fill="#04091a" stroke="#00F0FF" stroke-width="0.8" />
+    <circle cx="345" cy="8" r="2.5" fill="#00F0FF" class="beacon-light" />
+    <text x="440" y="11.5" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8" font-weight="700" fill="#00F0FF" letter-spacing="1">MULTI-FUNCTION AVIONICS CLUSTER</text>
+  </g>
+
+  <!-- ==================== LOWER DECK: 3 CONNECTED MFD CONSOLES ==================== -->
+
+  <!-- SCREEN 1: MISSION CORE & FRONTIERS (Left) -->
+  <g transform="translate(25, 250)">
+    <rect width="280" height="258" rx="8" fill="url(#screen-glass)" stroke="#334155" stroke-width="1.2" />
+    <!-- Header -->
+    <path d="M 0 8 Q 0 0 8 0 L 272 0 Q 280 0 280 8 L 280 26 L 0 26 Z" fill="#091430" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.3" />
+    <rect x="12" y="9" width="7" height="7" rx="1.5" fill="#00F0FF" class="beacon-light" />
+    <text x="24" y="16" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#00F0FF" letter-spacing="1.2">MFD_01 // CORE FRONTIERS</text>
+    <text x="268" y="16" text-anchor="end" font-family="monospace" font-size="8.5" fill="#64748B">DOMAIN_SPEC</text>
+
+    <!-- Capability 1: Multimodal AI -->
+    <g transform="translate(14, 35)">
+      <rect width="252" height="58" rx="5" fill="#060e24" stroke="#1e293b" stroke-width="1" />
+      <rect x="8" y="9" width="3" height="40" rx="1.5" fill="#00F0FF" />
+      <text x="18" y="21" font-family="'Space Grotesk', monospace" font-size="9.5" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">MULTIMODAL AI &amp; VLMs</text>
+      <text x="18" y="36" font-family="'Space Grotesk', sans-serif" font-size="8.5" fill="#94A3B8">Vision-Language Models &amp; Action Step Seg</text>
+      <text x="18" y="49" font-family="'Space Grotesk', monospace" font-size="8" fill="#38BDF8">Foundation Archs • Autonomous Agents</text>
+    </g>
+
+    <!-- Capability 2: Alignment & Post-Training -->
+    <g transform="translate(14, 100)">
+      <rect width="252" height="58" rx="5" fill="#060e24" stroke="#1e293b" stroke-width="1" />
+      <rect x="8" y="9" width="3" height="40" rx="1.5" fill="#38BDF8" />
+      <text x="18" y="21" font-family="'Space Grotesk', monospace" font-size="9.5" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">AI SAFETY &amp; RLHF</text>
+      <text x="18" y="36" font-family="'Space Grotesk', sans-serif" font-size="8.5" fill="#94A3B8">LLM Alignment &amp; Fine-Tuning Protocols</text>
+      <text x="18" y="49" font-family="'Space Grotesk', monospace" font-size="8" fill="#10B981">Model Evaluation • Adversarial Red-Teaming</text>
+    </g>
+
+    <!-- Capability 3: Low-Latency Systems -->
+    <g transform="translate(14, 165)">
+      <rect width="252" height="58" rx="5" fill="#060e24" stroke="#1e293b" stroke-width="1" />
+      <rect x="8" y="9" width="3" height="40" rx="1.5" fill="#818CF8" />
+      <text x="18" y="21" font-family="'Space Grotesk', monospace" font-size="9.5" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">SCALABLE EDGE SYSTEMS</text>
+      <text x="18" y="36" font-family="'Space Grotesk', sans-serif" font-size="8.5" fill="#94A3B8">Low-Latency Win32 Kernel APIs (&lt;0.5% CPU)</text>
+      <text x="18" y="49" font-family="'Space Grotesk', monospace" font-size="8" fill="#818CF8">High-Perf Python • React 18 • NVML Direct</text>
+    </g>
+
+    <!-- Footer Tag -->
+    <text x="140" y="246" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8" font-weight="700" fill="#64748B" letter-spacing="1">ENGINES: PYTORCH • CUDA • REACT • TAURI</text>
+  </g>
+
+  <!-- SCREEN 2: SECTOR STAR MAP & HYPERLANES (Center) -->
+  <g transform="translate(318, 250)">
+    <rect width="284" height="258" rx="8" fill="url(#screen-glass)" stroke="#334155" stroke-width="1.2" />
+    <!-- Header -->
+    <path d="M 0 8 Q 0 0 8 0 L 276 0 Q 284 0 284 8 L 284 26 L 0 26 Z" fill="#091430" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.3" />
+    <rect x="12" y="9" width="7" height="7" rx="1.5" fill="#10B981" class="beacon-light" />
+    <text x="24" y="16" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#10B981" letter-spacing="1.2">MFD_02 // SECTOR STAR NAVIGATION</text>
+    <text x="272" y="16" text-anchor="end" font-family="monospace" font-size="8.5" fill="#64748B">NAV_CHART</text>
+
+    <!-- Navigation Chart & Hyperlane Grid (Center at 142, 125) -->
+    <g transform="translate(142, 122)">
+      <!-- Range Circles -->
+      <circle cx="0" cy="0" r="82" fill="none" stroke="#1e293b" stroke-width="1" />
+      <circle cx="0" cy="0" r="60" fill="none" stroke="#00F0FF" stroke-width="0.7" stroke-opacity="0.25" stroke-dasharray="6 4" />
+      <circle cx="0" cy="0" r="40" fill="none" stroke="#00F0FF" stroke-width="0.8" stroke-opacity="0.35" />
+      <circle cx="0" cy="0" r="20" fill="none" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.4" stroke-dasharray="2 3" />
+
+      <!-- Coordinate Crosshairs -->
+      <line x1="-88" y1="0" x2="88" y2="0" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.3" stroke-dasharray="4 4" />
+      <line x1="0" y1="-88" x2="0" y2="88" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.3" stroke-dasharray="4 4" />
+
+      <!-- Degree Angle Markers -->
+      <text x="0" y="-85" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#64748B">000°</text>
+      <text x="86" y="3" text-anchor="start" font-family="monospace" font-size="7.5" fill="#64748B">090°</text>
+      <text x="0" y="93" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#64748B">180°</text>
+      <text x="-86" y="3" text-anchor="end" font-family="monospace" font-size="7.5" fill="#64748B">270°</text>
+
+      <!-- Constellation Hyperlanes (Navigation Routes) -->
+      <line x1="-40" y1="-25" x2="30" y2="-45" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.5" stroke-dasharray="3 3" />
+      <line x1="30" y1="-45" x2="55" y2="15" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.5" stroke-dasharray="3 3" />
+      <line x1="55" y1="15" x2="0" y2="35" stroke="#00F0FF" stroke-width="1.2" stroke-opacity="0.7" />
+      <line x1="0" y1="35" x2="-50" y2="18" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.5" stroke-dasharray="3 3" />
+
+      <!-- Star Nodes -->
+      <circle cx="-40" cy="-25" r="2" fill="#FFFFFF" />
+      <circle cx="30" cy="-45" r="2.5" fill="#38BDF8" filter="url(#glow-cyan)" />
+      <circle cx="55" cy="15" r="2" fill="#818CF8" />
+      <circle cx="-50" cy="18" r="2" fill="#FFFFFF" />
+
+      <!-- Canonical Target: Can Tho Station Beacon -->
+      <g transform="translate(0, 35)">
+        <circle cx="0" cy="0" r="14" fill="none" stroke="#00F0FF" stroke-width="1" class="beacon-ring" />
+        <circle cx="0" cy="0" r="5" fill="#00F0FF" filter="url(#glow-pulse)" />
+        <circle cx="0" cy="0" r="2" fill="#FFFFFF" />
+      </g>
+    </g>
+
+    <!-- Navigation Status Footer -->
+    <g transform="translate(14, 226)">
+      <rect width="256" height="24" rx="4" fill="#060e24" stroke="#1e293b" stroke-width="1" />
+      <circle cx="12" cy="12" r="2.5" fill="#00F0FF" />
+      <text x="22" y="15" font-family="'Space Grotesk', monospace" font-size="8.5" font-weight="700" fill="#00F0FF">BASE: CAN THO STATION</text>
+      <text x="246" y="15" text-anchor="end" font-family="'Space Grotesk', monospace" font-size="8.5" fill="#38BDF8">SECTOR: ASIA-PACIFIC</text>
+    </g>
+  </g>
+
+  <!-- SCREEN 3: QUANTUM COMMS & AVIONICS TELEMETRY (Right) -->
+  <g transform="translate(615, 250)">
+    <rect width="280" height="258" rx="8" fill="url(#screen-glass)" stroke="#334155" stroke-width="1.2" />
+    <!-- Header -->
+    <path d="M 0 8 Q 0 0 8 0 L 272 0 Q 280 0 280 8 L 280 26 L 0 26 Z" fill="#091430" stroke="#00F0FF" stroke-width="0.6" stroke-opacity="0.3" />
+    <rect x="12" y="9" width="7" height="7" rx="1.5" fill="#818CF8" class="beacon-light" />
+    <text x="24" y="16" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#818CF8" letter-spacing="1.2">MFD_03 // COMMS &amp; TELEMETRY</text>
+    <text x="268" y="16" text-anchor="end" font-family="monospace" font-size="8.5" fill="#64748B">DIAG_DATA</text>
+
+    <!-- Comms Channel 1: Email Dispatch -->
+    <g transform="translate(14, 35)">
+      <rect width="252" height="40" rx="5" fill="#060f26" stroke="#334155" stroke-width="1" />
+      <circle cx="18" cy="20" r="9" fill="#0e1f4d" stroke="#38BDF8" stroke-width="0.8" />
+      <!-- Small Mail Icon -->
+      <path d="M 12 16 L 18 20 L 24 16 M 12 16 L 12 24 L 24 24 L 24 16 Z" stroke="#00F0FF" stroke-width="0.8" fill="none" />
+      <text x="34" y="15" font-family="'Space Grotesk', monospace" font-size="7.5" font-weight="700" fill="#64748B" letter-spacing="1">QUANTUM DISPATCH (PRIMARY):</text>
+      <text x="34" y="29" font-family="'Space Grotesk', monospace" font-size="9.5" font-weight="700" fill="#00F0FF">lathaihoa2003@gmail.com</text>
+    </g>
+
+    <!-- Comms Channel 2: Voice Audio Link (CORRECTED PHONE FORMAT) -->
+    <g transform="translate(14, 82)">
+      <rect width="252" height="40" rx="5" fill="#060f26" stroke="#334155" stroke-width="1" />
+      <circle cx="18" cy="20" r="9" fill="#0e1f4d" stroke="#38BDF8" stroke-width="0.8" />
+      <!-- Signal Tower Icon -->
+      <path d="M 18 14 L 18 26 M 14 18 Q 18 15 22 18 M 12 21 Q 18 17 24 21" stroke="#38BDF8" stroke-width="0.8" fill="none" />
+      <text x="34" y="15" font-family="'Space Grotesk', monospace" font-size="7.5" font-weight="700" fill="#64748B" letter-spacing="1">SUBSPACE VOICE LINK:</text>
+      <text x="34" y="29" font-family="'Space Grotesk', monospace" font-size="10.5" font-weight="700" fill="#38BDF8">+84 865 254 028</text>
+    </g>
+
+    <!-- Telemetry Diagnostic Meters -->
+    <g transform="translate(14, 130)">
+      <text x="0" y="8" font-family="'Space Grotesk', monospace" font-size="8" font-weight="700" fill="#94A3B8" letter-spacing="1">ENGINE TELEMETRY DIAGNOSTICS:</text>
+
+      <!-- Meter 1: Neural Core Engine -->
+      <text x="0" y="23" font-family="'Space Grotesk', monospace" font-size="8" fill="#64748B">NEURAL CORE ENGINE</text>
+      <text x="252" y="23" text-anchor="end" font-family="monospace" font-size="8" fill="#00F0FF">98.4%</text>
+      <rect x="0" y="27" width="252" height="5" rx="2.5" fill="#0f172a" />
+      <rect x="0" y="27" width="248" height="5" rx="2.5" fill="#00F0FF" filter="url(#glow-cyan)" />
+
+      <!-- Meter 2: RLHF Integrity -->
+      <text x="0" y="45" font-family="'Space Grotesk', monospace" font-size="8" fill="#64748B">RLHF ALIGNMENT INTEGRITY</text>
+      <text x="252" y="45" text-anchor="end" font-family="monospace" font-size="8" fill="#10B981">100%</text>
+      <rect x="0" y="49" width="252" height="5" rx="2.5" fill="#0f172a" />
+      <rect x="0" y="49" width="252" height="5" rx="2.5" fill="#10B981" />
+
+      <!-- Meter 3: Win32 Kernel Overhead -->
+      <text x="0" y="67" font-family="'Space Grotesk', monospace" font-size="8" fill="#64748B">C-API WIN32 OVERHEAD</text>
+      <text x="252" y="67" text-anchor="end" font-family="monospace" font-size="8" fill="#38BDF8">&lt; 0.5% CPU</text>
+      <rect x="0" y="71" width="252" height="5" rx="2.5" fill="#0f172a" />
+      <rect x="0" y="71" width="18" height="5" rx="2.5" fill="#38BDF8" />
+
+      <!-- Accreditation Footer Pill -->
+      <rect x="0" y="87" width="252" height="22" rx="4" fill="#070e24" stroke="#1e293b" stroke-width="0.8" />
+      <text x="126" y="101" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="8" font-weight="700" fill="#818CF8" letter-spacing="0.8">GOOGLE CYBERSECURITY • UX CERTIFIED</text>
+    </g>
+  </g>
+</svg>
