@@ -130,7 +130,7 @@ A results-driven **AI Engineer & Systems Developer** and Computer Science gradua
 <div align="center">
 
 **Deep Space Transmission & Inquiries**  
-Email: [lathaihoa2003@gmail.com](mailto:lathaihoa2003@gmail.com) • Phone: `(+84) 0865 254 028` • Can Tho City, Vietnam
+Email: [lathaihoa2003@gmail.com](mailto:lathaihoa2003@gmail.com) • Phone: `(+84) 865 254 028` • Can Tho City, Vietnam
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:030712,40:0f172a,70:1e1b4b,100:38bdf8&height=100&section=footer" width="100%"/>
 
